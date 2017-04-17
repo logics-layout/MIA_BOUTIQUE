@@ -13,33 +13,7 @@
 // 800 -> Heavy, Extra Bold
 // 900 -> Black
 
-@include font-face("HelveticaNeueCyr", "../fonts/HelveticaNeueCyr/HelveticaNeueCyr-Black", $file-formats: eot woff ttf svg){
+@include font-face("Roboto", "../fonts/Roboto/", $file-formats: woff, woff2){
   font-style: normal;
   font-weight: 900;
 };
-
-@include font-face("HelveticaNeueCyr", "../fonts/HelveticaNeueCyr/HelveticaNeueCyr-Bold", $file-formats: eot woff ttf svg){
-  font-style: normal;
-  font-weight: bold;
-};
-
-@include font-face("HelveticaNeueCyr", "../fonts/HelveticaNeueCyr/HelveticaNeueCyr-Light", $file-formats: eot woff ttf svg){
-  font-style: normal;
-  font-weight: 300;
-};
-
-@include font-face("HelveticaNeueCyr", "../fonts/HelveticaNeueCyr/HelveticaNeueCyr-Medium", $file-formats: eot woff ttf svg){
-  font-style: normal;
-  font-weight: 500;
-};
-
-//@include font-face("HelveticaNeueCyr", "../fonts/HelveticaNeueCyr/HelveticaNeueCyr-Roman", $file-formats: eot woff ttf svg){
-//  font-style: normal;
-//  font-weight: bold;
-//};
-
-@include font-face("HelveticaNeueCyr", "../fonts/HelveticaNeueCyr/HelveticaNeueCyr-Thin", $file-formats: eot woff ttf svg){
-  font-style: normal;
-  font-weight: 100;
-};
-
