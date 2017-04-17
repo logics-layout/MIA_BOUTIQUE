@@ -13,7 +13,19 @@
 // 800 -> Heavy, Extra Bold
 // 900 -> Black
 
-@include font-face("Roboto", "../fonts/Roboto/", $file-formats: woff, woff2){
+@include font-face("Roboto", "../fonts/Roboto/roboto-bold_0-webfont", $file-formats: woff woff2){
   font-style: normal;
-  font-weight: 900;
+  font-weight: 700;
+};
+@include font-face("Roboto", "../fonts/Roboto/roboto-italic_0-webfont", $file-formats: woff woff2){
+  font-style: italic;
+  font-weight: 400;
+};
+@include font-face("Roboto", "../fonts/Roboto/roboto-regular_0-webfont", $file-formats: woff woff2){
+  font-style: normal;
+  font-weight: 400;
+};
+@include font-face("AA Bebas Neue", "../fonts/AA-BebasNeue/9080", $file-formats: woff ttf eot otf svg){
+  font-style: normal;
+  font-weight: 400;
 };

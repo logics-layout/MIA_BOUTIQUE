@@ -5,12 +5,141 @@ body, html{
   min-width: 320px;
 }
 
-@include my-media-query(max, map_get($grid-breakpoints, xl) - 1) {
 
+@include my-media-query(min, 1510px) {
+  .header {
+    &_index {
+      .header__position{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        &_left{
+          left: 47px;
+        }
+        &_right{
+          right: 180px;
+        }
+      }
+    }
+  }
+}
+
+@include my-media-query(min, 1737px) {
+  .header {
+    &_index {
+      .header__logo{
+        line-height: normal;
+      }
+      .header__table{
+        display: block;
+        &-cell{
+          display: block;
+          //text-align: left;
+        }
+      }
+    }
+  }
+}
+@include my-media-query(max, 1788px) {
+  .header {
+    &_index {
+      .header__position {
+        &_left {
+          left: 20px;
+        }
+      }
+    }
+  }
+}
+@include my-media-query(max, 1736px) {
+  .header_index .header__position_right {
+    right: 40px;
+  }
+  .header {
+    &_index {
+      .header__position {
+        &_left {
+          transform: none;
+          position: static;
+        }
+      }
+    }
+  }
+}
+@include my-media-query(max, map_get($grid-breakpoints, xl) - 1) {
+  .header{
+    &__logo{
+      line-height: 115px;
+      img{
+        width: 175px;
+      }
+    }
+  }
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, lg) - 1) {
-
+  .header{
+    border-bottom: none;
+    border-bottom: 1px solid #666666;
+    >.container{
+      padding: 0;
+      width: auto;
+    }
+    &__btnList{
+      &-btn{
+        height: 68px;
+        width: 69px;
+        line-height: 68px;
+        &:not(.header__btnList-btn_label){
+          border-left: 1px solid #666666;
+        }
+      }
+    }
+    &__logo{
+      line-height: normal;
+      display: block;
+      text-align: center;
+      img{
+        max-width: 75%;
+      }
+    }
+    &__list{
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      border-top: 2px solid #e5493a;
+      padding-top: 25px;
+      padding-bottom: 32px;
+      >ul{
+        text-align: center;
+        >li{
+          display: block;
+          font-size: 22px;
+          font-weight: 400;
+          line-height: 40px;
+          font-family: "AA Bebas Neue", sans-serif;
+          >a{
+            display: block;
+            color: #484848;
+          }
+        }
+      }
+    }
+    &__table{
+      &-cell{
+        vertical-align: middle !important;
+        &_btns{
+          width: 207px;
+        }
+      }
+    }
+    &__subMenu{
+      display: none;
+    }
+  }
 }
 
 @include my-media-query(min, map_get($grid-breakpoints, xs)) {
@@ -26,6 +155,189 @@ body, html{
 }
 
 @include my-media-query(min, map_get($grid-breakpoints, lg)) {
+  .header {
+    &__subMenu{
+      position: absolute;
+      //display: none;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: white;
+      box-shadow: 0 55px 51px rgba(0, 0, 0, 0.5);
+      border-top: 2px solid #e5493a;
+
+      margin-top: 20px;
+      visibility: hidden;
+      opacity: 0;
+      @include tr;
+
+      &-menuList{
+        font-size: 0;
+        margin: 0 -30px;
+        &-section{
+          display: inline-block;
+          vertical-align: top;
+          padding: 0 30px;
+        }
+        ul{
+          margin: 0 -11px;
+          li{
+            padding: 4px 0;
+            display: block;
+            a{
+              font-size: 16px;
+              font-weight: 300;
+              color: #484848;
+              display: block;
+              span{
+                padding: 3.5px 11px;
+                display: inline-block;
+              }
+              &:hover{
+                span{
+                  background-color: #4b4b4b;
+                  color: #fff;
+                }
+              }
+            }
+          }
+        }
+      }
+      &-table{
+        display: table;
+        width: 100%;
+        &-cell{
+          display: table-cell;
+          vertical-align: middle;
+          &_img{
+            width: 48.7%;
+          }
+        }
+      }
+    }
+    &__list {
+      display: inline-block !important;
+      vertical-align: middle;
+      ul {
+        @include nl;
+      }
+      > ul {
+        display: table;
+        margin: 0 -16px;
+        > li {
+          display: table-cell;
+          position: static;
+          vertical-align: middle;
+          &.parent {
+            //margin-right: -1px;
+            > a {
+              margin-right: -10px;
+            }
+            &:hover {
+              .header__subMenu {
+                margin-top: 0;
+                opacity: 1;
+                visibility: visible;
+              }
+            }
+          }
+          &:hover {
+            > a {
+              > span {
+                background-color: #e5493a;
+                color: #fff;
+              }
+            }
+          }
+          > a {
+            color: #484848;
+            font-family: "AA Bebas Neue", sans-serif;
+            font-size: 20px;
+            font-weight: 400;
+            padding: 0 3px;
+            letter-spacing: 0.2px;
+            display: block;
+            padding-bottom: 40px;
+            > span {
+              display: inline-block;
+              padding: 0 13px;
+              line-height: 38px;
+              padding-top: 5px;
+              > em {
+                display: inline-block;
+                vertical-align: middle;
+                @include triangle('down', currentColor, 8px, 5px);
+                margin-right: -3px;
+                margin-left: 5px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @include my-media-query(min, 1510px) {
+    .header {
+      &_index {
+        .header__list {
+          > ul {
+            > li {
+              > a {
+                line-height: 136px;
+                padding-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @include my-media-query(min, 1737px) {
+    .header {
+      &_index {
+        .header__list{
+          display: block;
+          >ul{
+            margin: 0 -23px;
+            >li{
+              >a{
+                padding: 0 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @include my-media-query(max, map_get($grid-breakpoints, xl) - 1) {
+    .header{
+      &__list{
+        >ul {
+          margin: 0 -14px;
+          > li {
+            &.parent > a {
+              margin-right: -6px;
+            }
+            > a {
+              font-size: 18px;
+              padding-bottom: 29px;
+              >span{
+                padding-left: 11px;
+                padding-right: 11px;
+                line-height: 29px;
+                padding-top: 4px;
+                >em{
+                  margin-right: -4px;
+                  margin-left: 2px;
+                  @include triangle('down', currentColor, 6px, 4px);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 
 }
 
@@ -38,5 +350,14 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, sm) - 1) {
+  .header{
+    &__table{
+      &-cell{
+        &_btns{
+          width: 69px;
+        }
+      }
+    }
+  }
 
 }

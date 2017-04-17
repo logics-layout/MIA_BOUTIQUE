@@ -1,5 +1,184 @@
 mixin header(data)
     .header(class!=data).not-styleLink
+        .container
+            .header__table
+                .header__table-cell.header__table-cell_btn.hidden-lg-up
+                    .mobile-list-anim.header__btnList-btn.header__btnList-btn_label
+                        input(type="checkbox", id="header-bottom-toggleMenuMbl")
+                        label.menuTopMobel(for="header-bottom-toggleMenuMbl")
+                            span.menu-mobile
+                                span.menu-mobile-hamburger.one
+                                span.menu-mobile-hamburger.two
+                                span.menu-mobile-hamburger.three
+
+                .header__table-cell(style="vertical-align: top;")
+                    a(href="#").header__logo.header__position.header__position_left: +img('/assets/header/logo', 'png')
+                .header__table-cell.header__table-cell_btns.text-right
+                    .header__btnList.header__position.header__position_right
+                        button.header__btnList-btn.hidden-xs-down: +icon('profile')
+                        button.header__btnList-btn
+                            +icon('cart')
+                            span.header__btnList-btn-count 2
+                        button.header__btnList-btn.hidden-xs-down: +icon('search')
+
+                    .header__list.text-left
+                        ul
+                            li.parent
+                                a(href="#"): span Бренды #[em]
+                                .header__subMenu
+                                    .container
+                                        .header__subMenu-table
+                                            .header__subMenu-table-cell
+                                                .header__subMenu-menuList
+                                                    .header__subMenu-menuList-section
+                                                        ul
+                                                            li: a(href="#"): span Платья
+                                                            li: a(href="#"): span Футболки
+                                                            li: a(href="#"): span Топы
+                                                            li: a(href="#"): span Юбки
+                                                            li: a(href="#"): span Брюки
+                                                    .header__subMenu-menuList-section
+                                                        ul
+                                                            li: a(href="#"): span Джинсы
+                                                            li: a(href="#"): span Шорты
+                                                            li: a(href="#"): span Блузки
+                                                            li: a(href="#"): span Джемперы
+                                                            li: a(href="#"): span Жакеты
+                                                    .header__subMenu-menuList-section
+                                                        ul
+                                                            li: a(href="#"): span Кардиганы
+                                                            li: a(href="#"): span Верхняя одежда
+                                                            li: a(href="#"): span Свитшоты
+                                            .header__subMenu-table-cell.header__subMenu-table-cell_img
+                                                +img('assets/header/menu-img')
+
+
+
+                            li.parent
+                                a(href="#"): span АКСЕССУАРЫ #[em]
+                                .header__subMenu
+                                    .container
+                                        .header__subMenu-table
+                                            .header__subMenu-table-cell
+                                                .header__subMenu-menuList
+                                                    .header__subMenu-menuList-section
+                                                        ul
+                                                            li: a(href="#"): span Платья
+                                                            li: a(href="#"): span Футболки
+                                                            li: a(href="#"): span Топы
+                                                            li: a(href="#"): span Юбки
+                                                            li: a(href="#"): span Брюки
+                                                    .header__subMenu-menuList-section
+                                                        ul
+                                                            li: a(href="#"): span Джинсы
+                                                            li: a(href="#"): span Шорты
+                                                            li: a(href="#"): span Блузки
+                                                            li: a(href="#"): span Джемперы
+                                                            li: a(href="#"): span Жакеты
+                                                    .header__subMenu-menuList-section
+                                                        ul
+                                                            li: a(href="#"): span Кардиганы
+                                                            li: a(href="#"): span Верхняя одежда
+                                                            li: a(href="#"): span Свитшоты
+                                            .header__subMenu-table-cell.header__subMenu-table-cell_img
+                                                img(src='http://homepassion.ru/tsfinirf/plate-zhenskiy-modnyy-988921192.jpg')
+                            li.parent
+                                a(href="#"): span Одежда #[em]
+                                .header__subMenu
+                                    .container
+                                        .header__subMenu-table
+                                            .header__subMenu-table-cell
+                                                .header__subMenu-menuList
+                                                    .header__subMenu-menuList-section
+                                                        ul
+                                                            li: a(href="#"): span Платья
+                                                            li: a(href="#"): span Футболки
+                                                            li: a(href="#"): span Топы
+                                                            li: a(href="#"): span Юбки
+                                                            li: a(href="#"): span Брюки
+                                                    .header__subMenu-menuList-section
+                                                        ul
+                                                            li: a(href="#"): span Джинсы
+                                                            li: a(href="#"): span Шорты
+                                                            li: a(href="#"): span Блузки
+                                                            li: a(href="#"): span Джемперы
+                                                            li: a(href="#"): span Жакеты
+                                                    .header__subMenu-menuList-section
+                                                        ul
+                                                            li: a(href="#"): span Кардиганы
+                                                            li: a(href="#"): span Верхняя одежда
+                                                            li: a(href="#"): span Свитшоты
+                                            .header__subMenu-table-cell.header__subMenu-table-cell_img
+                                                img(src="http://stylesprit.com/wp-content/uploads/2015/06/maxresdefault.jpg")
+                            li.parent
+                                a(href="#"): span Обувь #[em]
+                                .header__subMenu
+                                    .container
+                                        .header__subMenu-table
+                                            .header__subMenu-table-cell
+                                                .header__subMenu-menuList
+                                                    .header__subMenu-menuList-section
+                                                        ul
+                                                            li: a(href="#"): span Платья
+                                                            li: a(href="#"): span Футболки
+                                                            li: a(href="#"): span Топы
+                                                            li: a(href="#"): span Юбки
+                                                            li: a(href="#"): span Брюки
+                                                    .header__subMenu-menuList-section
+                                                        ul
+                                                            li: a(href="#"): span Джинсы
+                                                            li: a(href="#"): span Шорты
+                                                            li: a(href="#"): span Блузки
+                                                            li: a(href="#"): span Джемперы
+                                                            li: a(href="#"): span Жакеты
+                                                    .header__subMenu-menuList-section
+                                                        ul
+                                                            li: a(href="#"): span Кардиганы
+                                                            li: a(href="#"): span Верхняя одежда
+                                                            li: a(href="#"): span Свитшоты
+                                            .header__subMenu-table-cell.header__subMenu-table-cell_img
+                                                img(src="http://pecihaji.website/wp-content/uploads/2016/05/london-fashion-week-fashion-shows.jpg")
+                            li.parent
+                                a(href="#"): span Outlet #[em]
+                                .header__subMenu
+                                    .container
+                                        .header__subMenu-table
+                                            .header__subMenu-table-cell
+                                                .header__subMenu-menuList
+                                                    .header__subMenu-menuList-section
+                                                        ul
+                                                            li: a(href="#"): span Платья
+                                                            li: a(href="#"): span Футболки
+                                                            li: a(href="#"): span Топы
+                                                            li: a(href="#"): span Юбки
+                                                            li: a(href="#"): span Брюки
+                                                    .header__subMenu-menuList-section
+                                                        ul
+                                                            li: a(href="#"): span Джинсы
+                                                            li: a(href="#"): span Шорты
+                                                            li: a(href="#"): span Блузки
+                                                            li: a(href="#"): span Джемперы
+                                                            li: a(href="#"): span Жакеты
+                                                    .header__subMenu-menuList-section
+                                                        ul
+                                                            li: a(href="#"): span Кардиганы
+                                                            li: a(href="#"): span Верхняя одежда
+                                                            li: a(href="#"): span Свитшоты
+                                            .header__subMenu-table-cell.header__subMenu-table-cell_img
+                                                +img('assets/header/menu-img')
+                            li: a(href="#"): span Мир Mia Boutique
+                            li: a(href="#"): span Оплата и доставка
+                            li: a(href="#"): span Контакты
+
+                        .text-center.hidden-lg-up
+                            br
+                            button.btn.btn-grey.btn-ttu.btn-border.btn-md Войти в личный кабинет
+
+
+
+
+
+
 
 
 

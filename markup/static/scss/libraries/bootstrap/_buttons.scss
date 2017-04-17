@@ -14,10 +14,10 @@
   touch-action: manipulation;
   cursor: pointer;
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
-  //border: 3px solid transparent;
-  border: none;
+  border: 2px solid transparent;
+  //border: none;
   white-space: nowrap;
-  @include button-size(16px, 43px, $font-size-base, $line-height-base, $btn-border-radius-base);
+  @include button-size(10px, 17px, $font-size-base, $line-height-base, $btn-border-radius-base);
   @include user-select(none);
   //outline: none;
   position: relative;
@@ -25,18 +25,10 @@
 
   color: white;
 
-  font-size: 16px;
-  font-weight: 400;
-  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 3px;
 
-  &.btn-ttu{
-    text-transform: uppercase;
-  }
-  &.btn-width{
-    width: 100%;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
 
   em{
     //font-size: 29px;
@@ -92,6 +84,15 @@ a.btn {
   }
 }
 
+.btn-ttu{
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.btn-width{
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
 
 // Alternate buttons
 // --------------------------------------------------
@@ -161,6 +162,12 @@ a.btn {
   font-weight: 700;
   padding: 24px 60px;
   max-width: 100%;
+}
+
+.btn-md{
+  font-size: 14px;
+  padding: 15.5px 37.2px;
+  border-radius: 5px;
 }
 //.btn-sm {
 //  font-size: 12px;
