@@ -1,6 +1,26 @@
 mixin footer(data)
     footer.footer.not-styleLink
-        .container
+        .footer__lenta: .container: span.footer__lenta-bant
+
+        .footer__bottom
+            .container
+                .footer__content.footer__content_width
+                    .footer__content-cell
+                        .footer__content
+                            .footer__content-cell.hidden-md-down
+                                a(href="#").footer__logo: +img('/assets/footer/logo', 'png')
+                            .footer__content-cell: p © 2017, Бутик итальянской одежды «Mia Boutique»
+                            .footer__content-cell
+                                ul.network
+                                    li: a(href="#"): +icon('ins')
+                                    li: a(href="#"): +icon('vk')
+                                    li: a(href="#"): +icon('facebook', 'svg-facebook', 17, 17)
+                    .footer__content-cell
+                        a(href="#").copyright.color-black
+                            span.copyright-logo.hidden-sm-up: i.s-insite
+                            span.copyright-text: span.color-black__title Разработка и продвижение сайта —
+                            span.copyright-logo.hidden-xs-down: i.s-insite
+
 
 
 

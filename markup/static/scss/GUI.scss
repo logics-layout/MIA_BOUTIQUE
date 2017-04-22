@@ -51,11 +51,11 @@ a{
 
 h1, .h1{
   margin-bottom: 30px;
-  font-size: 50px;
   line-height: normal;
-  color: #4f4f4f;
-  font-family: GothamPro, sans-serif;
-  font-weight: 700;
+  color: #161616;
+  font-family: "AA Bebas Neue", sans-serif;
+  font-size: 60px;
+  font-weight: 400;
   &:first-child{
     margin-top: 0;
   }
@@ -88,10 +88,10 @@ p {
 }
 
 hr{
-  border-color: #f0f1f2;
-  margin: 55px 0;
+  border-color: #dcdcdc;
+  margin: 40px 0;
   &.two{
-    margin: 25px 0;
+    margin: 16px 0;
   }
 }
 
@@ -145,7 +145,6 @@ ol{
 
 b{
   font-weight: 700;
-  color: #292a3c;
 }
 
 .tableWrap{
@@ -351,15 +350,11 @@ table{
   //margin: 10px 0;
   li{
     display: inline-block;
-    padding: 2px;
+    padding: 4px;
     &.slick-active{
       button{
         &:after{
-          //background-color: #ffcb08;
-          border-color: #fff;
-        }
-        &:before{
-          opacity: 1;
+          background-color: currentColor;
         }
       }
     }
@@ -374,32 +369,31 @@ table{
       &:after{
         content: '';
         display: block;
-        width: 18px;
-        height: 18px;
         background-color: transparent;
-        border: 1px solid transparent;
         border-radius: 50%;
-      }
-      &:before{
-        content: '';
-        width: 8px;
-        height: 8px;
-        background-color: white;
-        border-radius: 50%;
-        position: absolute;
-        display: block;
-        top: 50%;
-        left: 50%;
-        margin-top: -4px;
-        margin-left: -4px;
-        opacity: .7;
+        width: 12px;
+        height: 12px;
+        border: 1px solid;
       }
     }
   }
 }
 
+.ttu{
+  text-transform: uppercase;
+}
+
+.title-table{
+  display: table;
+  width: 100%;
+  h1, .h1{
+    margin-bottom: 0;
+  }
+  &__cell{
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
 
 
-
-
-
+@include text-border-bottom('black', #161616);

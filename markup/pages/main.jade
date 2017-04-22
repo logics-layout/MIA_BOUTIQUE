@@ -23,11 +23,10 @@ html(class="no-js", lang="ru")
             +header(index)
             -if(!breadcrumb)
                 .container
-                    br
-                    br
+                    br.hidden-xs-down
                     ul.breadcrumb.not-styleLink
                         li: a(href="#"): span Главная
-                        li: span О компании
+                        li: span О бутике
 
             //- Include your components here
             //- start block content
@@ -37,6 +36,26 @@ html(class="no-js", lang="ru")
 
             .page__buffer
         .page__footer
+
+            .subscription
+                .container
+                    .subscription__table
+                        .subscription__table-cell.subscription__table-cell_title
+                            span.subscription__title Следите за новостями:
+                        .subscription__table-cell
+                            .subscription__form
+                                input.subscription__form-input(placeholder="Введите вашу эл. почту")
+                                button.subscription__form-button Подписаться на рассылку
+            br
+            br
+            .container.color-black
+                .row
+                    .col-lg-10
+                        p Хотите насладиться миром лучших дизайнеров женской итальянской одежды? Тогда Вам нужно посетить бутик модной одежды из Италии в Челябинске «Mia boutique». Только в нашем интернет-магазине Вы сможете выгодно купить женскую итальянскую одежду по привлекательной цене. Наша компания работает только с производителем: TWIN-SET, LIVIANA CONTI, MARIELLA ROSATI и PIANURA STUDIO. Все эти представленные в магазине марки – это незабываемый мир красоты, успеха и качества. Вы узнаете, что такое вкус, индивидуальность и неповторимый образ.
+                        p Сегодня уже все знают итальянский бутик в Челябинске. Только в нем находятся коллекции с наилучшим соотношением качества и цены, есть постоянные скидки, закрытые распродажи и лучшая программа лояльности.
+                        p Интернет-магазин «Mia boutique» – это самый модный и востребованный магазин, где Вас приятно удивит простая навигация, подробные описания, превосходные фотографии, стиль, качество, быстрая доставка по России, и профессиональный уровень обслуживания клиентов. Мы развиваемся и живем вместе с Вами.
+            br
+
             +footer()
 
         +modal()

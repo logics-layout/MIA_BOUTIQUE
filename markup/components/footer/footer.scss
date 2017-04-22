@@ -1,3 +1,54 @@
 .footer{
-
+  color: #161616;
+  &__lenta{
+    background-image: url('%=static=%/assets/footer/linta.jpg');
+    height: 20px;
+    >.container{
+      position: relative;
+    }
+    &-bant{
+      &:after{
+        content: url('%=static=%/assets/footer/bant.png');
+        position: absolute;
+        padding: 0;
+        top: 50%;
+        left: 100%;
+        transform: translateY(-50%);
+        margin-top: 13px;
+        margin-left: 69px;
+      }
+    }
+  }
+  &__bottom{
+    padding-top: 38px;
+    padding-bottom: 60px;
+  }
+  &__logo{
+    display: block;
+  }
+  &__content{
+    display: table;
+    &-cell{
+      display: table-cell;
+      vertical-align: bottom;
+      +*{
+        padding-left: 30px;
+      }
+    }
+    p{
+      margin-bottom: 5px;
+    }
+    &_width{
+      width: 100%;
+    }
+  }
+  .copyright{
+    margin-bottom: -8px;
+    line-height: 19px;
+    float: right;
+    text-align: right;
+    &-logo{
+      margin-top: -8px;
+    }
+  }
 }
