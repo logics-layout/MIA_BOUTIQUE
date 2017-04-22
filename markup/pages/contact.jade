@@ -1,0 +1,113 @@
+extends main
+
+
+block head
+    - var headData = {title: "Контакты"}
+    - var textFooter = true
+    - var footerLenta = true
+
+block content
+    .container
+        .title-table
+            .title-table__cell
+                h1.ttu.h1 Контакты
+            .title-table__cell.text-right.hidden-sm-down
+                .form-search(style="width: 270px;")
+                    input.form-search__input(placeholder="Поиск по каталогу")
+                    button.form-search__btn: +icon('search', 'svg-search', 15, 15)
+        br
+        br
+        .tabs
+            ul.tabs__nav.not-styleLink
+                li.active: a(href="#", data-block="#one"): span MIA BOUTIQUE
+                li: a(href="#", data-block="#two"): span MIA BOUTIQUE OUTLET
+            br
+            br
+            br
+            .tabs__content.contact-marginBottom
+                .tabs__content-item.active#one
+                     .contact
+                        .contact-left
+                            .row
+                                .col-lg-12.col-md-4
+                                    p.contact__section #[span.contact__title Адрес:] ул. Красная, 69
+                                .col-lg-12.col-md-4
+                                    p.contact__section #[span.contact__title Телефон:] #[a(href='#').not-styleLink.color-grey: span.color-grey__title +7 (351) 223-55-68]
+                                .col-lg-12.col-md-4
+                                    p.contact__section #[span.contact__title Эл. почта:] #[a(href='#').not-styleLink.color-grey: span.color-grey__title miaboutique74@gmail.com]
+                                .col-lg-12.col-md-6
+                                    div.contact__section.contact__section_marginBottomBig
+                                        span.contact__title.contact__title_marginBottom Соц. сети:
+                                        ul.network.not-styleLink
+                                            li: a(href="#"): +icon('ins')
+                                            li: a(href="#"): +icon('vk')
+                                            li: a(href="#"): +icon('facebook', 'svg-facebook', 17, 17)
+                                .col-lg-12.col-md-6
+                                    .contact__section_marginBottomBig
+                                        .hidden-sm-down
+                                            br.hidden-lg-up
+                                        button.btn.btn-red.ttu.btn-md СВЯЗАТЬСЯ С НАМИ
+
+
+                        .contact-right(style="background-image: url('%=static=%img/content/contact.jpg');")
+
+
+                .tabs__content-item#two
+                    .contact
+                        .contact-left
+                            p.contact__section #[span.contact__title Адрес:] ул. Красная, 69
+                            p.contact__section #[span.contact__title Телефон:] #[a(href='#').not-styleLink.color-grey: span.color-grey__title +7 (351) 223-55-68]
+                            p.contact__section #[span.contact__title Эл. почта:] #[a(href='#').not-styleLink.color-grey: span.color-grey__title miaboutique74@gmail.com]
+                            div.contact__section.contact__section_marginBottomBig
+                                span.contact__title.contact__title_marginBottom Соц. сети:
+                                ul.network.not-styleLink
+                                    li: a(href="#"): +icon('ins')
+                                    li: a(href="#"): +icon('vk')
+                                    li: a(href="#"): +icon('facebook', 'svg-facebook', 17, 17)
+
+                            button.btn.btn-red.ttu.btn-md СВЯЗАТЬСЯ С НАМИ
+
+
+                        .contact-right(style="background-image: url('%=static=%img/content/contact.jpg');")
+
+
+    #yamap.blockFooterMarginBottom
+
+block script
+    script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

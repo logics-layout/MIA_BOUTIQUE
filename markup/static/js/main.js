@@ -282,6 +282,35 @@ $('.tabs__nav').find('a').click(function(e){
     });
 
     block.delay(time).fadeIn(time, function () {
-        masonryReloadItems(block.find('.object'));
+        var object = block.find('.object');
+        if(object[0]){
+            masonryReloadItems(object);
+        }
     });
 });
+
+function initYmaps() {
+    var coords = [52.32594308927015, 104.2421168088913];
+    var MapPlaces = new ymaps.Map('yamap', {
+        center: coords,
+        zoom: 12,
+        controls: ['zoomControl']
+    });
+    MapPlaces.behaviors.disable('scrollZoom');
+
+    collection = new ymaps.GeoObjectCollection(null,{
+        iconLayout: 'default#image',
+        iconImageHref: 'placemark.png',
+        iconImageSize: [316, 143],
+        // iconImageOffset: [31, -83]
+    });
+
+    MapPlaces.geoObjects.add(collection);
+
+    placemark = new ymaps.Placemark(coords);
+    collection.add(placemark);
+}
+
+try{
+    ymaps.ready(initYmaps);
+}catch (e){}

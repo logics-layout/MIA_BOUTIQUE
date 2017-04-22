@@ -1,6 +1,7 @@
 mixin footer(data)
     footer.footer.not-styleLink
-        .footer__lenta: .container: span.footer__lenta-bant
+        - if(!footerLenta)
+            .footer__lenta: .container: span.footer__lenta-bant
 
         .footer__bottom
             .container

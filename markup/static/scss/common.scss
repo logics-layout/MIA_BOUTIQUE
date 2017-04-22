@@ -22,6 +22,11 @@ html, body {
   min-height: 100%;
   padding-bottom: 85px;
 }
+
+.blockFooterMarginBottom{
+  margin-bottom: -85px;
+}
+
 * html .page__wrapper {
     height: 100%;
 }
@@ -284,7 +289,8 @@ body {
   }
   &__content{
     &-item{
-
+      position: relative;
+      z-index: 3;
       &:not(.active){
         display: none;
       }
@@ -375,3 +381,55 @@ body {
     }
   }
 }
+
+#yamap{
+  height: 870px;
+  background-color: #e6e6e6;
+  position: relative;
+  z-index: 1;
+}
+
+.contact{
+  display: table;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  color: #959595;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  position: relative;
+  z-index: 9;
+  >*{
+    display: table-cell;
+    vertical-align: middle;
+  }
+  &-marginBottom{
+    margin-bottom: -172px;
+  }
+  &-left{
+    width: 334px;
+    padding: 49px 66px;
+    padding-bottom: 10px;
+  }
+  &-right{
+    background-size: cover;
+    background-position: center;
+  }
+  &__title{
+    color: #e5493a;
+    font-size: 14px;
+    font-weight: 700;
+    display: block;
+    &_marginBottom{
+      margin-bottom: 8px;
+    }
+  }
+  &__section{
+    margin-bottom: 25px;
+    &_marginBottomBig{
+      margin-bottom: 39px;
+    }
+  }
+}
+

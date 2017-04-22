@@ -109,6 +109,22 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, lg) - 1) {
+  #yamap{
+    height: 600px;
+  }
+  .contact {
+    display: block;
+    > * {
+      display: block;
+    }
+    &-left {
+      width: auto;
+    }
+    &-right {
+      height: 350px;
+    }
+  }
+
   .brend{
     margin: -10px;
     &__section{
@@ -453,6 +469,16 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, md) - 1) {
+  #yamap{
+    height: 500px;
+  }
+  .contact {
+    &-left {
+      padding: 39px 30px;
+      padding-bottom: 0;
+    }
+  }
+
   .subscription {
     &__title{
       font-size: 30px;
@@ -552,6 +578,9 @@ body, html{
 @include my-media-query(max, map_get($grid-breakpoints, sm) - 1) {
   .page__wrapper {
     padding-bottom: 40px;
+  }
+  .blockFooterMarginBottom{
+    margin-bottom: -40px;
   }
   .brend{
     &__section{
