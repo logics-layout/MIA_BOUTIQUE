@@ -26,7 +26,6 @@ $(window).on({
 });
 // $('#callback').modal('show')
 if ($.fn.slick) {
-
 //     $bottom__slider.slick({
 //         slidesToShow: 1,
 //         slidesToScroll: 1,
@@ -42,6 +41,48 @@ if ($.fn.slick) {
 //     checkBg();
 //
     $('.slider-inner').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        arrows: false,
+        // autoplay: true,
+        // autoplaySpeed: 3000,
+        // adaptiveHeight: true,
+    });
+
+    $('.listItemSlider').slick({
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        dots: false,
+        arrows: true,
+        prevArrow: "<button class='slick-prev slick-arrow'><svg class='icon__arrow-prev' width='8px' height='13px'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#arrow-prev'></use></svg></button>",
+        nextArrow: "<button class='slick-next slick-arrow'><svg class='icon__arrow-next' width='8px' height='13px'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#arrow-next'></use></svg></button>",
+        responsive: [
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                }
+            },
+            {
+                breakpoint: 452,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            },
+        ]
+    });
+
+    $('.item__img-slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         dots: true,
@@ -71,8 +112,8 @@ if ($.fn.slick) {
 //         ]
 //         // autoplay: true,
 //         // autoplaySpeed: 3000,
-        // prevArrow: "<button class='slick-prev slick-arrow'><i class='s-arrow-prev'></i></button>",
-        // nextArrow: "<button class='slick-next slick-arrow'><i class='s-arrow-next'></i></button>",
+//         prevArrow: "<button class='slick-prev slick-arrow'><i class='s-arrow-prev'></i></button>",
+//         nextArrow: "<button class='slick-next slick-arrow'><i class='s-arrow-next'></i></button>",
 //     });
 //
 //     itemDetaliSliderPreview.slick({

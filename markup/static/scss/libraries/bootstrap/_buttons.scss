@@ -17,7 +17,7 @@
   border: 2px solid transparent;
   //border: none;
   white-space: nowrap;
-  @include button-size(10px, 17px, $font-size-base, $line-height-base, $btn-border-radius-base);
+  @include button-size(15.5px, 30.3px, $font-size-base, $line-height-base, $btn-border-radius-base);
   @include user-select(none);
   //outline: none;
   position: relative;
@@ -27,7 +27,7 @@
 
   font-size: 14px;
   font-weight: 700;
-  border-radius: 3px;
+  border-radius: 5px;
 
 
   em{
@@ -107,8 +107,8 @@ a.btn {
 //.btn-blue{
 //  @include button-variant(#fff, #225faa);
 //}
-.btn-grey{
-  @include button-variant(#fff, #666);
+.btn-red{
+  @include button-variant(#fff, $mainColor);
 }
 .btn-orange{
   @include button-variant(#1b1b1b, #ef9c00);

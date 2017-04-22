@@ -30,6 +30,9 @@ a{
   }
 }
 
+.db{
+  display: block;
+}
 .not-styleLink{
   a{
     border-bottom: none;
@@ -61,12 +64,14 @@ h1, .h1{
   }
 }
 h2, .h2{
-  color: #0b6ab3;
   font-size: 30px;
-  font-weight: 600;
   line-height: normal;
   margin-bottom: 25px;
-  margin-top: 25px;
+  margin-top: 30px;
+
+  color: #161616;
+  font-family: "AA Bebas Neue", sans-serif;
+  font-weight: 400;
   &:first-child{
     margin-top: 0;
   }

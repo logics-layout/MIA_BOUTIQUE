@@ -72,10 +72,27 @@ body, html{
       }
   }
 }
+@include my-media-query(max, 1312px) {
+  .listItemSlider{
+    .slick-arrow{
+      background-color: rgba(230, 230, 230, 0.5);
+      &.slick-prev{
+        right: auto;
+        left: 0;
+        margin-right: 0;
+      }
+      &.slick-next{
+        left: auto;
+        right: 0;
+        margin-left: 0;
+      }
+    }
+  }
+}
 @include my-media-query(max, map_get($grid-breakpoints, xl) - 1) {
   .object {
     &-item {
-      height: 227px;
+      height: 290.5px;
     }
   }
   .footer__content-cell + * {
@@ -238,6 +255,14 @@ body, html{
 }
 
 @include my-media-query(min, map_get($grid-breakpoints, lg)) {
+  .h1_small{
+    font-size: 50px;
+  }
+  .h1_magrinTop{
+    &-big{
+      margin-top: 80px;
+    }
+  }
   .header {
     &__list{
       height: auto !important;

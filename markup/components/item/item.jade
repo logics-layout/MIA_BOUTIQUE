@@ -5,3 +5,31 @@ mixin item(num)
         - rowItem = item.list[num]
     - else
         - rowItem = item.list[0]
+
+    a(href="#").item.not-styleLink
+        span.item__img
+            span.item__stickers
+                span.item__stickers-sections
+                    each sticker in rowItem.stickers
+                        span.item__stickers-sections-section
+                            span.item__stickers-item(style=sticker.style)= sticker.title
+
+            span.item__img-slider
+                span.item__img-slider-section: +img('assets/item/1')
+                span.item__img-slider-section: +img('assets/item/1')
+                span.item__img-slider-section: +img('assets/item/1')
+
+            span.item__size
+                span.item__size-sections
+                    each size in rowItem.size
+                        span.item__size-sections-section
+                            span.item__size-item.ttu= size
+
+        span.db.item__desc
+            span.db.item__title= rowItem.title
+            span.db.item__title-sub: b= rowItem.titleSub
+            span.db.item__price
+                span.item__price-lineThrough: b= rowItem.price.lineThrough
+                |&nbsp;&nbsp;&nbsp;
+                span.item__price-default: b= rowItem.price.default
+            button.item__btn В корзину &nbsp; #[+icon('basket')]
