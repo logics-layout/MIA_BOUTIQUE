@@ -72,6 +72,16 @@ body, html{
       }
   }
 }
+@include my-media-query(max, 1232px) {
+  .cart {
+    &__item {
+      &-clear {
+        position: static;
+        margin: 0;
+      }
+    }
+  }
+}
 @include my-media-query(max, 1312px) {
   .listItemSlider{
     .slick-arrow{
@@ -90,6 +100,9 @@ body, html{
   }
 }
 @include my-media-query(max, map_get($grid-breakpoints, xl) - 1) {
+  .lk__left {
+    width: 200px;
+  }
   .object {
     &-item {
       height: 290.5px;
@@ -109,6 +122,46 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, lg) - 1) {
+  .cart {
+    display: block;
+    &__item {
+      display: block;
+      margin: -5px 0;
+      border-bottom: 1px dashed #e6e6e6;
+      padding: 19px 0;
+      &_head {
+        display: none;
+      }
+      >*{
+        display: inline-block;
+        padding: 5px 10px !important;
+        border-bottom: none !important;
+      }
+      &-img{
+        //width: auto !important;
+      }
+      &-title{
+        width: auto;
+      }
+    }
+  }
+
+  .lk {
+    display: block;
+    > * {
+      display: block;
+      width: auto;
+      padding-left: 0;
+    }
+    &__padding {
+      padding-top: 0;
+    }
+    &__left{
+      &-content{
+        border-right: none;
+      }
+    }
+  }
   #yamap{
     height: 600px;
   }
@@ -270,7 +323,18 @@ body, html{
 
 }
 
-@include my-media-query(min, map_get($grid-breakpoints, lg)) {
+@include my-media-query(min, map_get($grid-breakpoints, lg)){
+  .lk {
+    &__rigth {
+      .cart-itogPrice{
+        font-size: 16px;
+        white-space: nowrap;
+        &__textBig{
+          font-size: 27px;
+        }
+      }
+    }
+  }
   .h1_small{
     font-size: 50px;
   }
@@ -469,6 +533,27 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, md) - 1) {
+  .order {
+    &__item {
+      font-size: 14px;
+      &-table {
+        display: block;
+        margin: -2px 0;
+        > * {
+          display: inline-block;
+          vertical-align: middle;
+          padding: 2px 10px !important;
+        }
+      }
+      &-title{
+      }
+      &-btn{
+        width: 100%;
+        //padding: 0 !important;
+      }
+    }
+  }
+
   #yamap{
     height: 500px;
   }
@@ -576,6 +661,25 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, sm) - 1) {
+  .cart-itogPrice {
+    font-size: 16px;
+    &__textBig {
+      font-size: 25px;
+      &_margin{
+        margin: 0;
+      }
+    }
+  }
+  .cart {
+    &__item {
+      &-img {
+        width: 35% !important;
+      }
+      &-title{
+        width: 63% !important;
+      }
+    }
+  }
   .page__wrapper {
     padding-bottom: 40px;
   }

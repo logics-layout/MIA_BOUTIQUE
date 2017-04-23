@@ -98,6 +98,10 @@ hr{
   &.two{
     margin: 16px 0;
   }
+  &.three{
+    margin: 30px 0;
+    margin-bottom: 40px;
+  }
 }
 
 ol, ul{
@@ -289,16 +293,15 @@ table{
   position: relative;
   .dropdown-toggle{
     background-color: white;
-    border: 1px solid #d3d7da;
+    border: 1px solid #737373;
     border-radius: 4px;
-    padding: 0 19px;
+    padding: 0 13px;
     line-height: 47px;
-    height: 43px;
+    height: 42px;
     padding-right: 35px;
     .filter-option{
-      color: #5e5c67;
-      font-family: Arial, sans-serif;
-      font-size: 16px;
+      color: #484848;
+      font-size: 14px;
       font-weight: 400;
       line-height: 14px;
       font-style: normal;
@@ -307,13 +310,14 @@ table{
   .bs-caret{
     background-color: #fff;
     line-height: 21px;
-    right: 11px;
+    right: 18px;
     .caret{
-      border-top-color: #ef9c00;
-      border-top-width: 5px;
-      border-left-width: 5px;
-      border-right-width: 5px;
-      margin-left: -1px;
+      border: none;
+      display: block;
+      margin: 0 auto;
+      &:after{
+        content: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaWRZTWlkIiB3aWR0aD0iMTIiIGhlaWdodD0iNi43ODEiIHZpZXdCb3g9IjAgMCAxMiA2Ljc4MSI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOiM3MzczNzM7ZmlsbC1ydWxlOmV2ZW5vZGR9PC9zdHlsZT48L2RlZnM+PHBhdGggZD0iTTUuOTc1IDYuNzkzYS44MzguODM4IDAgMCAwIC41OTQtLjI0NWw1LjE1Ny01LjEyOGEuODMyLjgzMiAwIDAgMCAwLTEuMTgxLjg0NC44NDQgMCAwIDAtMS4xODggMEw1Ljk3NSA0Ljc3NyAxLjQxMS4yMzlhLjg0My44NDMgMCAwIDAtMS4xODcgMCAuODMyLjgzMiAwIDAgMCAwIDEuMTgxbDUuMTU3IDUuMTI5YS44NC44NCAwIDAgMCAuNTk0LjI0NHoiIGNsYXNzPSJjbHMtMSIvPjwvc3ZnPg==');
+      }
     }
   }
   &.min{
@@ -400,6 +404,34 @@ table{
   }
 }
 
+.text-sizeBig{
+  font-size: 16px;
+}
+
+.label{
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  color: white;
+  background-color: #c1c1c1;
+  padding: 8px 10px;
+  display: inline-block;
+  &_red{
+    background-color: #d83622;
+  }
+  &_green{
+    background-color: #7cc623;
+  }
+}
+
+.required{
+  font-size: 20px;
+  color: $mainColor;
+  line-height: 1px;
+}
+
 
 @include text-border-bottom('black', #161616);
+@include text-border-bottom('blackTwo', #484848);
 @include text-border-bottom('grey', #959595);
+@include text-border-bottom('red', $mainColor);

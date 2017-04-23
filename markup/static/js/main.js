@@ -314,3 +314,20 @@ function initYmaps() {
 try{
     ymaps.ready(initYmaps);
 }catch (e){}
+
+
+$('.order__item-toggle').click(function(e){
+    e.preventDefault();
+    var _this = $(this),
+        item = _this.closest('.order__item');
+        content = item.find('.order__item-content');
+
+    _this.toggleClass('active');
+    content.slideToggle(300);
+
+});
+
+
+
+
+

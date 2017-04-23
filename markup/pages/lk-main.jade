@@ -1,0 +1,70 @@
+extends main
+
+
+block head
+    - var headData = {title: title}
+    - var breadcrumb = true
+
+block content
+    .container
+        ul.breadcrumb.not-styleLink.hidden-lg-up
+            li: a(href="#"): span Главная
+            li: span= title
+        .lk
+            .lk__left
+                .lk__left-content.lk__padding
+                    p.lk__left-title Личный кабинет
+                    ul.lk__nav.not-styleLink
+                        li: a(href="#").color-blackTwo: span.color-blackTwo__title Мой профиль
+                        li: a(href="#").color-blackTwo #[span.color-blackTwo__title Корзина] &nbsp; #[span.lk__nav-count 4]
+                        li.active: a(href="#"): b История заказов
+                        li: a(href="#").color-blackTwo: span.color-blackTwo__title Выход
+
+                br
+            .lk__rigth.lk__padding
+                ul.breadcrumb.not-styleLink.hidden-md-down
+                    li: a(href="#"): span Главная
+                    li: span= title
+
+                h1.ttu.h1= title
+
+                block content-lk
+
+
+block script
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

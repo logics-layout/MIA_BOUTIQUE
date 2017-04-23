@@ -1,0 +1,126 @@
+extends lk-main
+
+
+block head
+    - var title = "Мой профиль"
+    - var breadcrumb = true
+
+block content-lk
+    p.color-black.form-title: b Личные данные
+    .row
+        .col-lg-4
+            .form-group
+                label Фамилия
+                input.form-control(placeholder="Константинопольский")
+        .col-lg-4
+            .form-group
+                label Имя
+                input.form-control(placeholder="Константин")
+        .col-lg-4
+            .form-group
+                label Отчество
+                input.form-control(placeholder="Константинович")
+        .col-lg-4
+            .form-group
+                label Электронная почта
+                input.form-control(placeholder="const@gmail.com")
+        .col-lg-4
+            .form-group
+                label Номер телефона
+                input.form-control(placeholder="+7 951 815 45 45")
+    hr.three
+    p.color-black.form-title: b Доставка
+    .row
+        .col-lg-4
+            .form-group
+                label Регион
+                select
+                    option Выберите из списка
+                    option item 1
+                    option item 2
+                    option item 3
+                    option item 4
+        .col-lg-4
+            .form-group
+                label Город
+                select
+                    option Выберите из списка
+                    option item 1
+                    option item 2
+                    option item 3
+                    option item 4
+        .col-lg-4
+            .form-group
+                label Индекс
+                input.form-control(placeholder="4844452")
+        .col-lg-4
+            .form-group
+                label Улица
+                input.form-control(placeholder="Комсомольский проспект")
+        .col-lg-4
+            .row
+                .col-lg-6
+                    .form-group
+                        label Дом
+                        input.form-control(placeholder="59 / 2")
+                .col-lg-6
+                    .form-group
+                        label Квартира
+                        input.form-control(placeholder="223")
+
+    hr.three
+    p.color-black.form-title: b Изменить пароль
+    .row
+        .col-lg-4
+            .form-group
+                label Старый пароль
+                input.form-control(placeholder="bqkvxijij2002")
+        .col-lg-4
+            .form-group
+                label Новый пароль
+                input.form-control(placeholder="bqkvx84849292")
+        .col-lg-4
+            .form-group
+                label Повторите пароль
+                input.form-control(placeholder="bqkvx84849292")
+    hr.three
+    button.btn.btn-red.ttu.btn-md.btn-md_borderBig(style="width: 160px;") Сохранить
+
+
+block script
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

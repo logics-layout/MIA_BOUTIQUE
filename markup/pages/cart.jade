@@ -1,0 +1,216 @@
+extends main
+
+
+block head
+    - var headData = {title: "Товары в корзине"}
+
+block content
+    .container
+        h1.ttu.h1 Товары в корзине
+
+        .cart.cart_page
+            .cart__item.cart__item_head
+                span Фото
+                span Название / артикул
+                span.cart__itemCenter Цена
+                span.cart__itemCenter Количество
+                span.cart__itemCenter Скидка
+                span.cart__itemCenter Стоимость
+
+            .cart__item
+                .cart__item-img: +img('content/order/4')
+                .cart__item-title
+                    span: b Платье с клёпками
+                    span DVR2100
+                .cart__item-price.cart__itemCenter
+                    span: b 6 800р.
+                    span.hidden-md-down &nbsp;
+                .cart__item-count.cart__itemCenter
+                    span
+                        span.count
+                            button.count__btn.count__btn_minus: +icon('arrow-prev')
+                            input.count__input(value="1")
+                            button.count__btn.count__btn_plus.active: +icon('arrow-next')
+                    span.hidden-md-down &nbsp;
+                .cart__item-descount.cart__itemCenter
+                    span: b 10%
+                    span.hidden-md-down &nbsp;
+                .cart__item-price.cart__itemCenter
+                    span: b.color-black 12 420р. #[button.cart__item-clear: +icon('clear')]
+                    span.hidden-md-down &nbsp;
+
+            .cart__item
+                .cart__item-img: +img('content/order/1')
+                .cart__item-title
+                    span: b Платье с клёпками
+                    span DVR2100
+                .cart__item-price.cart__itemCenter
+                    span: b 6 800р.
+                    span.hidden-md-down &nbsp;
+                .cart__item-count.cart__itemCenter
+                    span
+                        span.count
+                            button.count__btn.count__btn_minus: +icon('arrow-prev')
+                            input.count__input(value="1")
+                            button.count__btn.count__btn_plus.active: +icon('arrow-next')
+                    span.hidden-md-down &nbsp;
+                .cart__item-descount.cart__itemCenter
+                    span: b 10%
+                    span.hidden-md-down &nbsp;
+                .cart__item-price.cart__itemCenter
+                    span: b.color-black 12 420р. #[button.cart__item-clear: +icon('clear')]
+                    span.hidden-md-down &nbsp;
+
+            .cart__item
+                .cart__item-img: +img('content/order/2')
+                .cart__item-title
+                    span: b Платье с клёпками
+                    span DVR2100
+                .cart__item-price.cart__itemCenter
+                    span: b 6 800р.
+                    span.hidden-md-down &nbsp;
+                .cart__item-count.cart__itemCenter
+                    span
+                        span.count
+                            button.count__btn.count__btn_minus: +icon('arrow-prev')
+                            input.count__input(value="1")
+                            button.count__btn.count__btn_plus.active: +icon('arrow-next')
+                    span.hidden-md-down &nbsp;
+                .cart__item-descount.cart__itemCenter
+                    span: b 10%
+                    span.hidden-md-down &nbsp;
+                .cart__item-price.cart__itemCenter
+                    span: b.color-black 12 420р. #[button.cart__item-clear: +icon('clear')]
+                    span.hidden-md-down &nbsp;
+
+            .cart__item
+                .cart__item-img: +img('content/order/3')
+                .cart__item-title
+                    span: b Платье с клёпками
+                    span DVR2100
+                .cart__item-price.cart__itemCenter
+                    span: b 6 800р.
+                    span.hidden-md-down &nbsp;
+                .cart__item-count.cart__itemCenter
+                    span
+                        span.count
+                            button.count__btn.count__btn_minus: +icon('arrow-prev')
+                            input.count__input(value="1")
+                            button.count__btn.count__btn_plus.active: +icon('arrow-next')
+                    span.hidden-md-down &nbsp;
+                .cart__item-descount.cart__itemCenter
+                    span: b 10%
+                    span.hidden-md-down &nbsp;
+                .cart__item-price.cart__itemCenter
+                    span: b.color-black 12 420р. #[button.cart__item-clear: +icon('clear')]
+                    span.hidden-md-down &nbsp;
+        br
+        p.cart-itogPrice.text-right Итого: #[b.cart-itogPrice__textBig.cart-itogPrice__textBig_margin 230.00 р.]
+        br.hidden-md-up
+        p.h1.h1_small Оформление заказа
+        br
+        .step-title
+            span.step-title__num 1
+            span.step-title__title Информация о покупателе
+            span.step-title__text.color-red #[span.step-title__text-big *], поля обязательны для заполнения
+
+        .row
+            .col-lg-4
+                .form-group
+                    label Ф.И.О. #[span.required *]
+                    input(placeholder="").form-control
+            .col-lg-4
+                .form-group
+                    label Телефон #[span.required *]
+                    input(placeholder="").form-control
+            .col-lg-4
+                .form-group
+                    label Эл. почта #[span.required *]
+                    input(placeholder="").form-control
+        br
+        .step-title
+            span.step-title__num 2
+            span.step-title__title Доставка
+        .row
+            .col-lg-4
+                .form-group
+                    label Край, область #[span.required *]
+                    input(placeholder="").form-control
+            .col-lg-4
+                .form-group
+                    label Индекс #[span.required *]
+                    input(placeholder="").form-control
+            .col-lg-4
+                .form-group
+                    label Город #[span.required *]
+                    input(placeholder="").form-control
+            .col-lg-8
+                .form-group
+                    label Улица, дом, корпус, квартира #[span.required *]
+                    textarea(rows="4").form-control
+        br
+        .step-title
+            span.step-title__num 2
+            span.step-title__title Оплата
+
+        .row
+            .col-lg-4
+                .form-group
+                    label Выберите способ оплаты #[span.required *]
+                    input(placeholder="").form-control
+            .col-lg-4
+                .form-group
+                    label Введите номер вашей скидочной карты
+                    input(placeholder="").form-control
+            .col-lg-4
+                .form-group
+                    label Промо-код
+                    input(placeholder="").form-control
+            .col-lg-8
+                .form-group
+                    label Комментарий к заказу
+                    textarea(rows="4").form-control
+            .col-lg-4
+                br
+                p.cart-itogPrice.cart-itogPrice_margin Итого к оплате: #[b.cart-itogPrice__textBig 230.00 р.]
+                button.btn.btn-red.btn-order.ttu Оформить заказ
+
+
+block script
+    script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

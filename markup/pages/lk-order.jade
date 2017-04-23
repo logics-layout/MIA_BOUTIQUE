@@ -1,0 +1,230 @@
+extends lk-main
+
+
+block head
+    - var title = "История заказов"
+    - var breadcrumb = true
+
+block content-lk
+    .order
+        .order__item.not-styleLink
+            .order__item-table
+                span.order__item-title: b Заказ №3
+                span 16 апреля 2016
+                span 28 000 руб.
+                span: a(href="#").order__item-toggle.color-blackTwo: span.color-blackTwo__title.color-blackTwo__title_viewBorder.color-blackTwo__title_dashed Смотреть содержимое
+                span.order__item-btn: span.label(style="width: 100%;") В обработке
+            .order__item-content
+                .cart
+                    .cart__item
+                        .cart__item-img: +img('content/order/1')
+                        .cart__item-title
+                            span: b Платье с клёпками
+                            span DVR2100
+                        .cart__item-price.cart__itemCenter
+                            span: b 6 800р.
+                            span.hidden-md-down &nbsp;
+                        .cart__item-count.cart__itemCenter
+                            span: b 2
+                            span.hidden-md-down &nbsp;
+                        .cart__item-descount.cart__itemCenter
+                            span: b 10%
+                            span.hidden-md-down &nbsp;
+                        .cart__item-price.cart__itemCenter
+                            span: b.color-black 12 420р.
+                            span.hidden-md-down &nbsp;
+                    .cart__item
+                        .cart__item-img: +img('content/order/2')
+                        .cart__item-title
+                            span: b Сарафан DVROMA
+                            span DVR2100
+                        .cart__item-price.cart__itemCenter
+                            span: b 14 600р.
+                            span.hidden-md-down &nbsp;
+                        .cart__item-count.cart__itemCenter
+                            span: b 1
+                            span.hidden-md-down &nbsp;
+                        .cart__item-descount.cart__itemCenter
+                            span: b 0%
+                            span.hidden-md-down &nbsp;
+                        .cart__item-price.cart__itemCenter
+                            span: b.color-black 14 600р.
+                            span.hidden-md-down &nbsp;
+                    .cart__item
+                        .cart__item-img: +img('content/order/3')
+                        .cart__item-title
+                            span: b Платье Twin-set
+                            span DVR2100
+                        .cart__item-price.cart__itemCenter
+                            span: b 14 600р.
+                            span.hidden-md-down &nbsp;
+                        .cart__item-count.cart__itemCenter
+                            span: b 1
+                            span.hidden-md-down &nbsp;
+                        .cart__item-descount.cart__itemCenter
+                            span: b 0%
+                            span.hidden-md-down &nbsp;
+                        .cart__item-price.cart__itemCenter
+                            span: b.color-black 14 600р.
+                            span.hidden-md-down &nbsp;
+
+        .order__item.not-styleLink
+            .order__item-table
+                span.order__item-title: b Заказ №2
+                span 08 апреля 2016
+                span 28 000 руб.
+                span: a(href="#").order__item-toggle.color-blackTwo.active: span.color-blackTwo__title.color-blackTwo__title_viewBorder.color-blackTwo__title_dashed Смотреть содержимое
+                span.order__item-btn: span.label.label_red(style="width: 100%;") Отправлен
+            .order__item-content.active
+                .cart
+                    .cart__item
+                        .cart__item-img: +img('content/order/1')
+                        .cart__item-title
+                            span: b Платье с клёпками
+                            span DVR2100
+                        .cart__item-price.cart__itemCenter
+                            span: b 6 800р.
+                            span.hidden-md-down &nbsp;
+                        .cart__item-count.cart__itemCenter
+                            span: b 2
+                            span.hidden-md-down &nbsp;
+                        .cart__item-descount.cart__itemCenter
+                            span: b 10%
+                            span.hidden-md-down &nbsp;
+                        .cart__item-price.cart__itemCenter
+                            span: b.color-black 12 420р.
+                            span.hidden-md-down &nbsp;
+                    .cart__item
+                        .cart__item-img: +img('content/order/2')
+                        .cart__item-title
+                            span: b Сарафан DVROMA
+                            span DVR2100
+                        .cart__item-price.cart__itemCenter
+                            span: b 14 600р.
+                            span.hidden-md-down &nbsp;
+                        .cart__item-count.cart__itemCenter
+                            span: b 1
+                            span.hidden-md-down &nbsp;
+                        .cart__item-descount.cart__itemCenter
+                            span: b 0%
+                            span.hidden-md-down &nbsp;
+                        .cart__item-price.cart__itemCenter
+                            span: b.color-black 14 600р.
+                            span.hidden-md-down &nbsp;
+                    .cart__item
+                        .cart__item-img: +img('content/order/3')
+                        .cart__item-title
+                            span: b Платье Twin-set
+                            span DVR2100
+                        .cart__item-price.cart__itemCenter
+                            span: b 14 600р.
+                            span.hidden-md-down &nbsp;
+                        .cart__item-count.cart__itemCenter
+                            span: b 1
+                            span.hidden-md-down &nbsp;
+                        .cart__item-descount.cart__itemCenter
+                            span: b 0%
+                            span.hidden-md-down &nbsp;
+                        .cart__item-price.cart__itemCenter
+                            span: b.color-black 14 600р.
+                            span.hidden-md-down &nbsp;
+
+        .order__item.not-styleLink
+            .order__item-table
+                span.order__item-title: b Заказ №1
+                span 28 марта 2016
+                span 9 000 руб.&nbsp;&nbsp;&nbsp;&nbsp;
+                span: a(href="#").order__item-toggle.color-blackTwo: span.color-blackTwo__title.color-blackTwo__title_viewBorder.color-blackTwo__title_dashed Смотреть содержимое
+                span.order__item-btn: span.label.label_green(style="width: 100%;") Получен
+            .order__item-content
+                .cart
+                    .cart__item
+                        .cart__item-img: +img('content/order/1')
+                        .cart__item-title
+                            span: b Платье с клёпками
+                            span DVR2100
+                        .cart__item-price.cart__itemCenter
+                            span: b 6 800р.
+                            span.hidden-md-down &nbsp;
+                        .cart__item-count.cart__itemCenter
+                            span: b 2
+                            span.hidden-md-down &nbsp;
+                        .cart__item-descount.cart__itemCenter
+                            span: b 10%
+                            span.hidden-md-down &nbsp;
+                        .cart__item-price.cart__itemCenter
+                            span: b.color-black 12 420р.
+                            span.hidden-md-down &nbsp;
+                    .cart__item
+                        .cart__item-img: +img('content/order/2')
+                        .cart__item-title
+                            span: b Сарафан DVROMA
+                            span DVR2100
+                        .cart__item-price.cart__itemCenter
+                            span: b 14 600р.
+                            span.hidden-md-down &nbsp;
+                        .cart__item-count.cart__itemCenter
+                            span: b 1
+                            span.hidden-md-down &nbsp;
+                        .cart__item-descount.cart__itemCenter
+                            span: b 0%
+                            span.hidden-md-down &nbsp;
+                        .cart__item-price.cart__itemCenter
+                            span: b.color-black 14 600р.
+                            span.hidden-md-down &nbsp;
+                    .cart__item
+                        .cart__item-img: +img('content/order/3')
+                        .cart__item-title
+                            span: b Платье Twin-set
+                            span DVR2100
+                        .cart__item-price.cart__itemCenter
+                            span: b 14 600р.
+                            span.hidden-md-down &nbsp;
+                        .cart__item-count.cart__itemCenter
+                            span: b 1
+                            span.hidden-md-down &nbsp;
+                        .cart__item-descount.cart__itemCenter
+                            span: b 0%
+                            span.hidden-md-down &nbsp;
+                        .cart__item-price.cart__itemCenter
+                            span: b.color-black 14 600р.
+                            span.hidden-md-down &nbsp;
+
+
+block script
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

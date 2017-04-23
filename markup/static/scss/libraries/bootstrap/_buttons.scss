@@ -62,8 +62,8 @@
   &.active {
     outline: 0;
     //background-image: none;
-    box-shadow: 0 0 0 #000;
-    transform: translateY(3px);
+    box-shadow: inset 0 4px 5px rgba(0, 0, 0, 0.23);
+    //transform: translateY(3px);
   }
 
   &.disabled,
@@ -84,14 +84,13 @@ a.btn {
   }
 }
 
-.btn-ttu{
-  text-transform: uppercase;
-  font-size: 12px;
-}
 .btn-width{
   width: 100%;
   padding-left: 10px;
   padding-right: 10px;
+}
+.btn-notRadius{
+  border-radius: 0;
 }
 
 // Alternate buttons
@@ -104,9 +103,12 @@ a.btn {
 //.btn-green{
 //  @include button-variant(#fff, #54bb00);
 //}
-//.btn-blue{
-//  @include button-variant(#fff, #225faa);
-//}
+.btn-green{
+  @include button-variant(#fff, #7cc623);
+}
+.btn-grey{
+  @include button-variant(#fff, #c1c1c1);
+}
 .btn-red{
   @include button-variant(#fff, $mainColor);
 }
@@ -168,7 +170,16 @@ a.btn {
   border-radius: 3px;
   font-size: 12px;
   padding: 10px 20px;
+  &_borderBig{
+    border-radius: 5px;
+  }
 }
+
+.btn-order{
+  font-size: 16px;
+  padding: 8px 15px;
+}
+
 //.btn-sm {
 //  font-size: 12px;
 //  padding-top: 5.5px;
