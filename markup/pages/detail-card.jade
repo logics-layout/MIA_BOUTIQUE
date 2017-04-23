@@ -1,0 +1,135 @@
+extends main
+
+include ../components/item/item
+
+block head
+    - var headData = {title: "Платье с клёпками"}
+    //- var index = 'header_index'
+
+    link(href="%=static=%css/separate-css/slick.css", rel="stylesheet", type="text/css")
+
+block content
+    .container.detail-card
+        .row
+            .col-lg-5
+                .detail-card__slider.not-styleLink
+                    span.item__stickers-sections
+                        span.item__stickers-sections-section
+                            span.item__stickers-item.item__stickers-item_big -30 %
+
+                    .detail-card__slider-view.resize-el.resize-el_grey.magnificPopup
+                        -for(var i=0;i<12;i++)
+                            a(href="%=static=%img/content/detail-card__slider/1.jpg").detail-card__slider-view-section: +img('content/detail-card__slider/1')
+                    .detail-card__slider-view-dots
+                    .detail-card__slider-preview
+                        -for(var i=0;i<12;i++)
+                            .detail-card__slider-preview-section(style="background-image: url('%=static=%img/content/detail-card__slider/1.jpg');")
+                    br
+
+
+            .col-lg-7
+                .detail-card__desc
+                    .detail-card__article #[b Артикул:] &nbsp;&nbsp; #[span A62EN]
+                    p.h1.detail-card__title Платье с клёпками
+                    a(href='#').not-styleLink.color-blue: span.color-blue__title.color-blue__title_viewBorder.color-blue__title_dashed Таблица размеров
+                    br
+                    br
+                    .row: .col-xs-10.col-lg-11.col-xs-12
+                        .row
+                            .col-lg-5.col-sm-6
+                                .form-group
+                                    select
+                                        option Выберите размер
+                                        option item 1
+                                        option item 2
+                                        option item 3
+                                        option item 4
+                                        option item 5
+                            .col-lg-5.col-sm-6
+                                .form-group
+                                    select
+                                        option Выберите цвет
+                                        option item 1
+                                        option item 2
+                                        option item 3
+                                        option item 4
+                                        option item 5
+
+                    p.detail-card__price: b
+                        span.detail-card__price-descont 680.00 р.
+                        | &nbsp;&nbsp;&nbsp;
+                        span.detail-card__price-default 230.00 р.
+
+                    button.btn.btn-red.ttu Добавить в корзину &nbsp;&nbsp; #[+icon('basket', 'svg-basket', 21, 17)]
+                    span.hidden-xs-down &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    .hidden-sm-up
+                    a(href="#", style="white-space: nowrap;").not-styleLink.color-greyTwo
+                        span.color-greyTwo__title.color-greyTwo__title_viewBorder.color-greyTwo__title_dashed Поделиться образом
+                        | &nbsp;
+                        span: +icon('plus')
+                    br
+                    br
+                    .collapse.not-styleLink
+                        .collapse__item
+                            a(href="#").collapse__item-toggle.active Описание товара #[span.collapse__item-toggle-after]
+                            p.collapse__item-content.active Только в нашем интернет-магазине Вы сможете выгодно купить женскую итальянскую одежду по привлекательной цене. Наша компания работает только с производителем: TWIN-SET, LIVIANA CONTI, MARIELLA ROSATI и PIANURA STUDIO. Все эти представленные в магазине марки – это незабываемый мир красоты,
+                        .collapse__item
+                            a(href="#").collapse__item-toggle Детали #[span.collapse__item-toggle-after]
+                            p.collapse__item-content Только в нашем интернет-магазине Вы сможете выгодно купить женскую итальянскую одежду по привлекательной цене. Наша компания работает только с производителем: TWIN-SET, LIVIANA CONTI, MARIELLA ROSATI и PIANURA STUDIO. Все эти представленные в магазине марки – это незабываемый мир красоты,
+                        .collapse__item
+                            a(href="#").collapse__item-toggle Состав #[span.collapse__item-toggle-after]
+                            p.collapse__item-content Только в нашем интернет-магазине Вы сможете выгодно купить женскую итальянскую одежду по привлекательной цене. Наша компания работает только с производителем: TWIN-SET, LIVIANA CONTI, MARIELLA ROSATI и PIANURA STUDIO. Все эти представленные в магазине марки – это незабываемый мир красоты,
+                        .collapse__item
+                            a(href="#").collapse__item-toggle Как ухаживать #[span.collapse__item-toggle-after]
+                            p.collapse__item-content Только в нашем интернет-магазине Вы сможете выгодно купить женскую итальянскую одежду по привлекательной цене. Наша компания работает только с производителем: TWIN-SET, LIVIANA CONTI, MARIELLA ROSATI и PIANURA STUDIO. Все эти представленные в магазине марки – это незабываемый мир красоты,
+                        .collapse__item
+                            a(href="#").collapse__item-toggle Доставка и оплата #[span.collapse__item-toggle-after]
+                            p.collapse__item-content Только в нашем интернет-магазине Вы сможете выгодно купить женскую итальянскую одежду по привлекательной цене. Наша компания работает только с производителем: TWIN-SET, LIVIANA CONTI, MARIELLA ROSATI и PIANURA STUDIO. Все эти представленные в магазине марки – это незабываемый мир красоты,
+
+        br.hidden-lg-up
+        p.h1.h1_small.h1_magrinTop-big Дополните свой образ #[span.hidden-xs-down &nbsp; #[+icon('bow')]]
+        .listItemSlider
+            -for(var i=0;i<8;i++)
+                .listItemSlider__section
+                    +item(i)
+
+
+block script
+    script(src="%=static=%js/separate-js/slick.min.js" type="text/javascript")
+    script(src="%=static=%js/separate-js/jquery.magnific-popup.min.js" type="text/javascript")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -40,25 +40,6 @@
   overflow-y: auto;
 }
 
-.modal__table{
-  display: table;
-  width: 100%;
-  >*{
-    display: table-row;
-    +*{
-      >*{
-        padding-top: 20px;
-      }
-    }
-    >*{
-      display: table-cell;
-      vertical-align: middle;
-      +*{
-        padding-left: 15px;
-      }
-    }
-  }
-}
 
 // Shell div to position the modal with bottom padding
 .modal-dialog {
@@ -68,15 +49,17 @@
   .close{
     @include btn-clear;
     position: absolute;
-    top: 0;
+    bottom: 100%;
     right: 0;
-    width: 22px;
-    height: 100%;
+    top: auto;
+    height: auto;
     z-index: 9;
-    fill: #b4b4b4;
-    padding-right: 42px;
+    fill: #fff;
+    padding-right: 0;
+    padding-bottom: 8px;
+    padding-left: 50px;
     &:hover{
-      fill: #000;
+      fill: $mainColor;
     }
     i{
       svg{
@@ -86,6 +69,17 @@
   }
 }
 
+//.modal-dialog {
+//  .close {
+//    bottom: auto;
+//    top: 0;
+//    right: 0;
+//    width: 22px;
+//    padding-right: 73px;
+//    padding-top: 67px;
+//  }
+//}
+
 // Actual modal
 .modal-content {
   position: relative;
@@ -94,10 +88,13 @@
   //border: 1px solid $modal-content-border-color;
   //border-radius: $border-radius-large;
   //@include box-shadow(0 3px 9px rgba(0,0,0,.5));
-  box-shadow: 0 35px 40px rgba(0, 92, 86, 0.15);
   background-clip: padding-box;
   // Remove focus outline from opened modal
   outline: 0;
+  background-image: url('%=static=%assets/modal/bg.jpg');
+  border: 3px solid white;
+  background-position: top right;
+  margin-top: 40px;
 }
 
 // Modal background
@@ -141,26 +138,28 @@
 }
 
 // Title text within header
-.modal-title {
-  margin: 0;
-  //line-height: $modal-title-line-height;
-  //text-align: center;
-  font-size: 26px;
-  line-height: 28px;
-  font-weight: 600;
-  color: #010302;
-  font-family: Neris, sans-serif;
+.modal__title{
+  color: white;
+  font-family: "AA Bebas Neue", sans-serif;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: normal;
+}
 
-  margin-bottom: 17px;
-  &.small{
-    font-size: 20px;
-    line-height: 30px;
+.modal__titleSection{
+  font-size: 0;
+  margin: 0 -18px;
+  margin-bottom: 15px;
+  &-section{
+    padding: 0 18px;
+    display: inline-block;
+    font-size: 14px;
   }
-  &-sub{
-    font-weight: 300;
-    text-align: center;
+  +.modal__titleSection-text{
+    margin-top: -20px;
   }
 }
+
 
 // Modal body
 // Where all modal content resides (sibling of .modal-header and .modal-footer)
@@ -200,12 +199,8 @@
   overflow: scroll;
 }
 
-.modal-padding {
-  padding-left: 54px;
-  padding-right: 54px;
-}
-
 // Scale up the modal
+
 @media (min-width: $screen-sm-min) {
   // Automatically set modal's width for larger viewports
   .modal-dialog {
@@ -213,30 +208,42 @@
     margin: 30px auto;
   }
   .modal-content {
-    box-shadow: 0 35px 40px rgba(0, 92, 86, 0.15);
+    box-shadow: 0 30px 30px rgba(70, 70, 70, 0.3);
+    background-position: top left;
   }
   .modal-title {
     font-size: 32px;
     line-height: 36px;
   }
 
+
+
   .modal-body {
-    padding: 39px 60px;
+    padding-top: 50px;
+    padding-left: 385px;
+    padding-right: 150px;
+    padding-bottom: 80px;
   }
-
-  .well-title{
-    font-size: 30px;
-  }
-  .well-titleSub{
-    font-size: 18px;
-    line-height: 24px;
-    margin-bottom: 35px;
-  }
-
   // Modal sizes
   .modal-sm { width: $modal-sm; }
 }
 
 @media (min-width: $screen-md-min) {
   .modal-lg { width: $modal-lg; }
+  .modal__titleSection {
+    margin-bottom: 60px;
+  }
+  .modal__titleSection{
+    +.modal__titleSection-text{
+      margin-top: -58px;
+      margin-bottom: 23px;
+    }
+  }
+}
+
+@media (max-width: 991px) and (min-width: 767px) {
+  .modal-body {
+    padding-right: 70px;
+    padding-left: 323px;
+  }
 }

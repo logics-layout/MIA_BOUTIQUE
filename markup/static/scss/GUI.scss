@@ -62,6 +62,9 @@ h1, .h1{
   &:first-child{
     margin-top: 0;
   }
+  svg{
+    margin-bottom: -6px;
+  }
 }
 h2, .h2{
   font-size: 30px;
@@ -305,6 +308,9 @@ table{
       font-weight: 400;
       line-height: 14px;
       font-style: normal;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
   .bs-caret{
@@ -434,4 +440,7 @@ table{
 @include text-border-bottom('black', #161616);
 @include text-border-bottom('blackTwo', #484848);
 @include text-border-bottom('grey', #959595);
+@include text-border-bottom('greyTwo', #737373);
 @include text-border-bottom('red', $mainColor);
+@include text-border-bottom('blue', #00a8ec);
+@include text-border-bottom('white', #fff);

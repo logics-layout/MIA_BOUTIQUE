@@ -142,6 +142,11 @@ output {
 
   &:focus{
   }
+  &_white{
+    background-color: white;
+    border-radius: 2px;
+    border-color: transparent;
+  }
 
   // Placeholder
   @include placeholder(#484848);

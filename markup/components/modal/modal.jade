@@ -1,44 +1,49 @@
 mixin modal()
-    #callback(class="modal fade")
-        .modal-dialog.modal-md
+    #registration(class="modal fade")
+        .modal-dialog.modal-lg
             .modal-content
-                .modal-header.modal-padding
-                    p.modal-header__title Узнать цену
-                    //button(type="button", class="close", data-dismiss="modal", aria-hidden="true"): +icon('clear')
-                .modal-body.modal-padding
-                    .row: .col-xs-11
-                        #callback-form
-                            .modal__table
-                                .modal__table-row
-                                    div.modal__table-col
-                                        span Ваша заявка
-                                    div.modal__table-col
-                                        input.form-control(placeholder="Экскаватор TVEX 180W")
-                                .modal__table-row
-                                    div.modal__table-col
-                                        span Ваш город
-                                    div.modal__table-col
-                                        input.form-control(placeholder="")
-                                .modal__table-row
-                                    div.modal__table-col
-                                        span Приобретение в лизинг
-                                    div.modal__table-col
-                                        input.form-control(placeholder="")
-                                .modal__table-row
-                                    div.modal__table-col
-                                        span Ф.И.О
-                                    div.modal__table-col
-                                        input.form-control(placeholder="")
-                                .modal__table-row
-                                    div.modal__table-col
-                                        span Эл. почта
-                                    div.modal__table-col
-                                        input.form-control(placeholder="")
-                                .modal__table-row
-                                    div.modal__table-col
-                                        span Телефон
-                                    div.modal__table-col
-                                        input.form-control(placeholder="")
-                            br
-                            .text-center: button.btn.btn-orange.btn-ttu Отправить заявку
+                button(type="button", class="close", data-dismiss="modal", aria-hidden="true"): +icon('modal-clear')
+                .modal-body
+                    .modal__titleSection
+                        .modal__titleSection-section
+                            .modal__title Регистрация
+                        .modal__titleSection-section
+                            a(href="#").color-white.not-styleLink: span.color-white__title.color-white__title_viewBorder.color-white__title_dashed Авторизация
+
+
+                    p.modal__titleSection-text.color-white Все поля обязательны для заполнения
+
+                    .form-group
+                        label.color-white Ф.И.О.
+                        input.form-control.form-control_white(placeholder="")
+                    .form-group
+                        label.color-white Номер телефона
+                        input.form-control.form-control_white(placeholder="")
+                    .form-group
+                        label.color-white Эл. почта
+                        input.form-control.form-control_white(placeholder="")
+                    br
+                    button.btn.btn-red.ttu.btn-modal Зарегистрироваться
+    #login(class="modal fade")
+        .modal-dialog.modal-lg
+            .modal-content
+                button(type="button", class="close", data-dismiss="modal", aria-hidden="true"): +icon('modal-clear')
+                .modal-body
+                    .modal__titleSection
+                        .modal__titleSection-section
+                            .modal__title Авторизация
+                        .modal__titleSection-section
+                            a(href="#").color-white.not-styleLink: span.color-white__title.color-white__title_viewBorder.color-white__title_dashed Регистрация
+
+                    .form-group
+                        label.color-white Логин
+                        input.form-control.form-control_white(placeholder="")
+                    .form-group
+                        label.color-white Пароль
+                        input.form-control.form-control_white(placeholder="")
+                    br
+                    button.btn.btn-red.ttu.btn-modal Войти в личный кабинет
+                    span.hidden-sm-down &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    a(href="#").not-styleLink.color-white: span.color-white__title.color-white__title_viewBorder.color-white__title_dashed Забыли пароль?
+
 

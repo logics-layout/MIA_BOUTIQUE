@@ -122,6 +122,27 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, lg) - 1) {
+  .brand {
+    &__item {
+      margin: 0 -15px;
+      &-desc {
+        padding-right: 15px;
+        padding-left: 15px;
+      }
+    }
+  }
+
+  .detail-card {
+    &__slider {
+      margin-right: 0;
+    }
+    &__desc{
+      padding-left: 0;
+    }
+    &__slider-preview{
+      display: none;
+    }
+  }
   .cart {
     display: block;
     &__item {
@@ -320,10 +341,48 @@ body, html{
 }
 
 @include my-media-query(min, map_get($grid-breakpoints, md)) {
-
+  .item {
+    &__stickers {
+      &-item {
+        &_big {
+          width: 60px;
+          height: 60px;
+          font-size: 26px;
+          line-height: 65px;
+        }
+      }
+    }
+  }
 }
 
 @include my-media-query(min, map_get($grid-breakpoints, lg)){
+
+  .brand__item{
+    >*{
+      position: relative;
+      width: 50%;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    &:nth-of-type(2n){
+      .brand__item-img{
+        right: -50%;
+      }
+      .brand__item-desc{
+        left: -50%;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+    }
+    &-btnList{
+      margin: -5px -10px;
+      &-section{
+        padding: 5px 10px;
+      }
+    }
+  }
+
+
   .lk {
     &__rigth {
       .cart-itogPrice{
@@ -661,6 +720,15 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, sm) - 1) {
+  .btn-modal{
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .modal__titleSection + .modal__titleSection-text {
+    line-height: 16px;
+    margin-top: 1px;
+  }
   .cart-itogPrice {
     font-size: 16px;
     &__textBig {

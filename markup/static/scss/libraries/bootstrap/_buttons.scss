@@ -28,7 +28,10 @@
   font-size: 14px;
   font-weight: 700;
   border-radius: 5px;
-
+  svg{
+    fill: currentColor;
+    margin-bottom: -4px;
+  }
 
   em{
     //font-size: 29px;
@@ -173,6 +176,15 @@ a.btn {
   &_borderBig{
     border-radius: 5px;
   }
+}
+
+.btn-modal{
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  padding: 10.5px 30.3px;
 }
 
 .btn-order{
