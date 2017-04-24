@@ -1,0 +1,224 @@
+extends main
+
+include ../components/item/item
+
+block head
+    - var headData = {title: title}
+    - var breadcrumb = true
+    link(rel="stylesheet", href="%=static=%css/separate-css/nouislider.css")
+    link(href="%=static=%css/separate-css/slick.css", rel="stylesheet", type="text/css")
+
+block content
+    .container
+        ul.breadcrumb.not-styleLink.hidden-lg-up
+            li: a(href="#"): span Главная
+            li: a(href="#"): span Каталог
+            li: span Платья
+        .lk
+            .lk__left
+                .lk__left-content.lk__padding
+                    p.lk__left-title.hidden-md-down Каталог товаров:
+
+                    button.hidden-lg-up.btn.btn-red.ttu.btn-width.catalog-toggle-btn Каталог товаров
+
+                    .catalog-toggle-content
+                        br
+                        a(href="#").lk__btn-red.not-styleLink Коллекция
+                        a(href="#").lk__btn-suggestions.not-styleLink
+                                span(style="width: 38px;"): span.lk__btn-suggestions-icon.ttu NEW
+                                span: span.lk__btn-suggestions-title Весна - лето 2017
+
+                        ul.lk__nav.not-styleLink
+                            li: a(href="#"): b Бренды
+                            li.active.parent
+                                a(href="#")
+                                    b Одежда
+                                    em.lk__nav-after
+                                .lk__nav-toggle.active
+                                    ul.lk__nav-subMenu
+                                        li: a(href="#").lk__nav-link.active
+                                            span.lk__nav-icon: +icon('dresses')
+                                            span: span.lk__nav-link-title Платья
+                                        li: a(href="#").lk__nav-link
+                                            span.lk__nav-icon: +icon('t-shirt')
+                                            span: span.lk__nav-link-title Футболки
+                                        li: a(href="#").lk__nav-link
+                                            span.lk__nav-icon: +icon('tops')
+                                            span: span.lk__nav-link-title Топы
+                                        li: a(href="#").lk__nav-link
+                                            span.lk__nav-icon: +icon('skirts')
+                                            span: span.lk__nav-link-title Юбки
+                                        li: a(href="#").lk__nav-link
+                                            span.lk__nav-icon: +icon('pants')
+                                            span: span.lk__nav-link-title Брюки
+                                        li: a(href="#").lk__nav-link
+                                            span.lk__nav-icon: +icon('dresses')
+                                            span: span.lk__nav-link-title Джинсы
+                                        li: a(href="#").lk__nav-link
+                                            span.lk__nav-icon: +icon('t-shirt')
+                                            span: span.lk__nav-link-title Шорты
+                                        li: a(href="#").lk__nav-link
+                                            span.lk__nav-icon: +icon('tops')
+                                            span: span.lk__nav-link-title Блузы
+                                        li: a(href="#").lk__nav-link
+                                            span.lk__nav-icon: +icon('skirts')
+                                            span: span.lk__nav-link-title Джемперы
+                                        li: a(href="#").lk__nav-link
+                                            span.lk__nav-icon: +icon('pants')
+                                            span: span.lk__nav-link-title Жакеты
+                                        li: a(href="#").lk__nav-link
+                                            span.lk__nav-icon: +icon('dresses')
+                                            span: span.lk__nav-link-title Кардиганы
+                                        li: a(href="#").lk__nav-link
+                                            span.lk__nav-icon: +icon('t-shirt')
+                                            span: span.lk__nav-link-title Верхняя одежда
+                                        li: a(href="#").lk__nav-link
+                                            span.lk__nav-icon: +icon('tops')
+                                            span: span.lk__nav-link-title Свитшоты и бомберы
+
+                            li.parent
+                                a(href="#")
+                                    b Обувь
+                                    em.lk__nav-after
+                                .lk__nav-toggle
+                                    ul.lk__nav-subMenu
+                                        li: a(href="#").lk__nav-link.active
+                                            span.lk__nav-icon: +icon('dresses')
+                                            span: span.lk__nav-link-title Платья
+                                        li: a(href="#").lk__nav-link
+                                            span.lk__nav-icon: +icon('t-shirt')
+                                            span: span.lk__nav-link-title Футболки
+                                        li: a(href="#").lk__nav-link
+                                            span.lk__nav-icon: +icon('tops')
+                                            span: span.lk__nav-link-title Топы
+                                        li: a(href="#").lk__nav-link
+                                            span.lk__nav-icon: +icon('skirts')
+                                            span: span.lk__nav-link-title Юбки
+                                        li: a(href="#").lk__nav-link
+                                            span.lk__nav-icon: +icon('pants')
+                                            span: span.lk__nav-link-title Брюки
+                                        li: a(href="#").lk__nav-link
+                                            span.lk__nav-icon: +icon('dresses')
+                                            span: span.lk__nav-link-title Джинсы
+                            li.parent
+                                a(href="#")
+                                    b Аксессуары
+                                    em.lk__nav-after
+                                .lk__nav-toggle
+                                    ul.lk__nav-subMenu
+                                        li: a(href="#").lk__nav-link.active
+                                            span.lk__nav-icon: +icon('dresses')
+                                            span: span.lk__nav-link-title Платья
+                                        li: a(href="#").lk__nav-link
+                                            span.lk__nav-icon: +icon('t-shirt')
+                                            span: span.lk__nav-link-title Футболки
+
+                br
+                a(href="#").hidden-md-down.not-styleLink: +img('content/banner')
+
+
+            .lk__rigth.lk__padding
+                ul.breadcrumb.not-styleLink.hidden-md-down
+                    li: a(href="#"): span Главная
+                    li: a(href="#"): span Каталог
+                    li: span Платья
+
+                .title-table
+                    .title-table__cell
+                        h1.ttu.h1 Платья
+                    .title-table__cell.text-right.hidden-sm-down
+                        .form-search(style="width: 270px;")
+                            input.form-search__input(placeholder="Поиск по каталогу")
+                            button.form-search__btn: +icon('search', 'svg-search', 15, 15)
+                br
+                .catalog__filter
+                    .catalog__filter-section
+                        select
+                            option Выберите размер
+                            option item 1
+                            option item 2
+                            option item 3
+                            option item 4
+                            option item 5
+                    .catalog__filter-section
+                        select
+                            option Выберите цвет
+                            option item 1
+                            option item 2
+                            option item 3
+                            option item 4
+                            option item 5
+                    .catalog__filter-section.catalog__filter-section_range
+                        .catalog__filter-block
+                            .catalog__filter-block-section
+                                span.catalog__filter-block-title Цена: #[+icon('range')]
+                            .catalog__filter-block-section.catalog__filter-block-section_range
+                                .catalog__filter-range
+                                    #range
+                                    p.ot 100
+                                    p.do 100
+                br
+                br
+                .itemList
+                    - for(var i=0; i<9; i++)
+                        .itemList__section: +item(i)
+                br
+                br
+                .pagination.not-styleLink
+                    .pagination__left.pagination__btnBlock
+                        a(href="#").pagination__btn.pagination__btn_black
+                            span.pagination__btn-after: +icon('arrow-prev')
+
+                    .pagination__center
+                        ul.pagination__list
+                            li: a(href="#"): span 1
+                            li.active: a(href="#"): span 2
+                            li: a(href="#"): span 3
+                            li: a(href="#"): span 4
+                            li: a(href="#"): span 5
+
+                    .pagination__right.pagination__btnBlock
+                        a(href="#").pagination__btn.pagination__btn_red
+                            span.pagination__btn-title.hidden-sm-down: b Следующая
+                            span.pagination__btn-after: +icon('arrow-next')
+
+
+block script
+    script(src="%=static=%js/separate-js/nouislider.min.js")
+    script(src="%=static=%js/separate-js/slick.min.js" type="text/javascript")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -103,6 +103,12 @@ body, html{
   .lk__left {
     width: 200px;
   }
+  .lk__rigth{
+    padding-left: 230px;
+  }
+  .catalog__filter-block-section_range{
+    width: 270px;
+  }
   .object {
     &-item {
       height: 290.5px;
@@ -122,6 +128,15 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, lg) - 1) {
+  .catalog-toggle-content{
+    display: none;
+  }
+  .itemList{
+    margin: -8px;
+    &__section{
+      padding: 8px;
+    }
+  }
   .brand {
     &__item {
       margin: 0 -15px;
@@ -178,6 +193,7 @@ body, html{
       padding-top: 0;
     }
     &__left{
+      float: none;
       &-content{
         border-right: none;
       }
@@ -592,6 +608,36 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, md) - 1) {
+  .pagination {
+    &__btnBlock {
+      width: auto;
+    }
+  }
+  .catalog__filter-block-section_range{
+    width: 100%;
+  }
+  .catalog {
+    &__filter {
+      display: block;
+      margin: 0;
+      &-section {
+        display: block;
+        +*{
+          padding-left: 0;
+          padding-top: 15px;
+        }
+        &_range{
+          width: auto;
+          text-align: left;
+        }
+      }
+    }
+  }
+  .itemList{
+    &__section{
+      width: 50%;
+    }
+  }
   .order {
     &__item {
       font-size: 14px;
@@ -720,6 +766,11 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, sm) - 1) {
+  .itemList{
+    &__section{
+      width: 100%;
+    }
+  }
   .btn-modal{
     width: 100%;
     padding-left: 15px;

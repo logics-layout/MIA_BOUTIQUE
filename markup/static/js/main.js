@@ -225,6 +225,7 @@ if ($.fn.magnificPopup) {
 // });
 
 $('.collapse__item-toggle').click(function(e){
+    e.preventDefault();
     var _this = $(this),
         parent = _this.parent(),
         time = 300;
@@ -236,6 +237,22 @@ $('.collapse__item-toggle').click(function(e){
         var _this = $(this);
         _this.find('.collapse__item-toggle').removeClass('active');
         _this.find('.collapse__item-content').slideUp(time);
+    })
+});
+
+$('.lk__nav >li.parent > a').click(function(e){
+    e.preventDefault();
+    var _this = $(this),
+        parent = _this.parent(),
+        time = 300;
+
+    parent.toggleClass('active');
+    parent.find('.lk__nav-toggle').stop().slideToggle(time);
+
+    parent.siblings().each(function () {
+        var _this = $(this);
+        _this.removeClass('active');
+        _this.find('.lk__nav-toggle').stop().slideUp(time);
     })
 });
 
@@ -342,6 +359,62 @@ $('.order__item-toggle').click(function(e){
 
 $('.modal-open').modal('show');
 
+
+var _fnNoUiSlider, catalogPriceInput, catalogPriceInputDo, catalogPriceInputOt, range;
+catalogPriceInput = $('.catalog__filter-range');
+range = catalogPriceInput.find('#range');
+catalogPriceInputOt = catalogPriceInput.find('.ot');
+catalogPriceInputDo = catalogPriceInput.find('.do');
+
+if (typeof noUiSlider !== "undefined" && noUiSlider !== null) {
+    noUiSlider.create(range[0], {
+        start: [2270, 7315],
+        connect: true,
+        range: {
+            'min': 0,
+            'max': 10000
+        },
+        format: {
+            'to': (function(value) {
+                return value !== void 0 && value.toFixed(0);
+            }),
+            'from': Number
+        }
+    });
+    _fnNoUiSlider = function(values, handle, val3, val4, val5) {
+        var el;
+        [catalogPriceInputOt, catalogPriceInputDo].forEach(function(item) {
+            var index;
+            index = item.parent().index();
+            return item.change(function() {
+                var array, val;
+                array = [];
+                val = $(this).val();
+                if (index === 0) {
+                    array = [val, null];
+                } else {
+                    array = [null, val];
+                }
+                return range[0].noUiSlider.set(array);
+            });
+        });
+        if (handle) {
+            el = catalogPriceInputDo;
+        } else {
+            el = catalogPriceInputOt;
+        }
+        el.text(values[handle]+" p.");
+        return el.css('left', val5[handle] + "%");
+    };
+    range[0].noUiSlider.on('update', _fnNoUiSlider);
+}
+
+$('.catalog-toggle-btn').click(function(e){
+   e.preventDefault();
+    $(this).toggleClass('active');
+    $('.catalog-toggle-content').stop().slideToggle(300);
+
+});
 
 
 

@@ -30,6 +30,6 @@ mixin item(num)
             span.db.item__title-sub: b= rowItem.titleSub
             span.db.item__price
                 span.item__price-lineThrough: b= rowItem.price.lineThrough
-                |&nbsp;&nbsp;&nbsp;
+                | &nbsp;&nbsp;&nbsp;
                 span.item__price-default: b= rowItem.price.default
             button.item__btn В корзину &nbsp; #[+icon('basket')]
