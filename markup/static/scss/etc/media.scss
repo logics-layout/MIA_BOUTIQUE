@@ -6,6 +6,8 @@ body, html{
 }
 
 
+
+
 @include my-media-query(max, 1570px) {
   .footer {
     &__lenta {
@@ -37,6 +39,13 @@ body, html{
 }
 
 @include my-media-query(max, 1460px) {
+  .index__blockVideo{
+    height: 750px;
+    &-title{
+      font-size: 80px;
+      line-height: 84px;
+    }
+  }
   .index-brands{
     &__item{
       height: 750px;
@@ -152,6 +161,40 @@ body, html{
     }
   }
 }
+
+@include my-media-query(max, 1500px) {
+  .stock__item {
+    height: 335px;
+    &.row-2{
+      height: 670px;
+    }
+  }
+  .stock__item-label {
+    font-size: 25px;
+    line-height: 32px;
+    padding: 14px 21px;
+  }
+  .stock__item-label-red{
+    font-size: 27px;
+    margin-bottom: 24px;
+  }
+  .stock__item-content {
+    padding-left: 40px;
+    padding-right: 20px;
+  }
+  .stock__item-content-title {
+    font-size: 40px;
+  }
+  .stock__item-content-text {
+    font-size: 21px;
+    line-height: 31px;
+  }
+  .stock__item-title{
+    font-size: 33px;
+  }
+}
+
+
 @include my-media-query(max, map_get($grid-breakpoints, xl) - 1) {
   .index-brands{
     &__desc {
@@ -190,6 +233,67 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, lg) - 1) {
+  .index__blockVideo{
+    height: 749px;
+    padding-top: 168px;
+    &-title{
+      font-size: 65px;
+      line-height: 67px;
+    }
+  }
+
+  .stock {
+    &__item {
+      height: 435px;
+      &-title {
+        font-size: 40px;
+      }
+      &-label {
+        font-size: 20px;
+        line-height: 28px;
+        width: 270px;
+        max-width: 100%;
+      }
+      &-label-red {
+        font-size: 25px;
+        margin-bottom: 20px;
+      }
+      &-content {
+        padding-bottom: 53px;
+        padding-top: 47px;
+      }
+      &-imgList{
+        margin-top: 35px;
+        margin-bottom: 35px;
+        &-section{
+          +*{
+            padding-left: 40px;
+          }
+        }
+      }
+      &-content{
+        &-title{
+
+        }
+        &-text{
+          font-size: 18px;
+          line-height: 25px;
+          width: 165px;
+        }
+      }
+    }
+    .row-2 {
+      height: 435px;
+    }
+    .col-1,
+    .grid-sizer{
+      width: 50%;
+    }
+    .col-2{
+      width: 50%;
+    }
+  }
+
   .index-brands {
     &__item {
       width: 50%;
@@ -369,85 +473,6 @@ body, html{
       }
     }
   }
-
-  .header{
-    border-bottom: none;
-    border-bottom: 1px solid #666666;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    &__buffer{
-      height: 69px;
-    }
-    >.container{
-      padding: 0;
-      width: auto;
-    }
-    &__btnList{
-      &-btn{
-        text-align: center;
-        width: 69px;
-        &:not(.header__btnList-btn_label){
-          border-left: 1px solid #666666;
-        }
-        &-icon{
-          display: block;
-          width: 100%;
-          height: 68px;
-          line-height: 68px;
-        }
-        &_label{
-          height: 68px;
-          line-height: 68px;
-        }
-      }
-    }
-    &__logo{
-      line-height: normal;
-      display: block;
-      text-align: center;
-      img{
-        max-width: 75%;
-      }
-    }
-    &__list{
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      background-color: #fff;
-      border-top: 2px solid #e5493a;
-      padding-top: 25px;
-      padding-bottom: 32px;
-      >ul{
-        text-align: center;
-        >li{
-          display: block;
-          font-size: 22px;
-          font-weight: 400;
-          line-height: 40px;
-          font-family: "AA Bebas Neue", sans-serif;
-          >a{
-            display: block;
-            color: #484848;
-          }
-        }
-      }
-    }
-    &__table{
-      &-cell{
-        vertical-align: middle !important;
-        &_btns{
-          width: 207px;
-        }
-      }
-    }
-    &__subMenu{
-      display: none;
-    }
-  }
 }
 
 @include my-media-query(min, map_get($grid-breakpoints, xs)) {
@@ -471,82 +496,7 @@ body, html{
       }
     }
   }
-}
 
-@include my-media-query(min, map_get($grid-breakpoints, lg)){
-  .clothing {
-    &__section {
-      width: 33.33%;
-      &:nth-last-of-type(1), &:nth-last-of-type(2){
-        .clothing__item {
-          border-bottom: none;
-        }
-      }
-      &:hover{
-        .clothing__item{
-          border-color: transparent;
-          outline: 5px solid #ecd6af;
-          box-shadow: 0 30px 30px rgba(204, 190, 163, 0.3);
-          transform: scale(1.06);
-          z-index: 2;
-          &-img{
-            transform: scale(1.08);
-          }
-        }
-      }
-    }
-    &__item{
-      &-img{
-        transition: 1s;
-      }
-    }
-  }
-
-  .brand__item{
-    >*{
-      position: relative;
-      width: 50%;
-      display: inline-block;
-      vertical-align: middle;
-    }
-    &:nth-of-type(2n){
-      .brand__item-img{
-        right: -50%;
-      }
-      .brand__item-desc{
-        left: -50%;
-        padding-top: 0;
-        padding-bottom: 0;
-      }
-    }
-    &-btnList{
-      margin: -5px -10px;
-      &-section{
-        padding: 5px 10px;
-      }
-    }
-  }
-
-
-  .lk {
-    &__rigth {
-      .cart-itogPrice{
-        font-size: 16px;
-        white-space: nowrap;
-        &__textBig{
-          font-size: 27px;
-        }
-      }
-    }
-  }
-  .h1_small{
-    font-size: 50px;
-  }
-  .h1_magrinTop{
-    &-big{
-      margin-top: 80px;
-    }
-  }
   .header {
     &__list{
       height: auto !important;
@@ -673,31 +623,31 @@ body, html{
   }
   @include my-media-query(min, 1510px) {
     .header {
-        .header__list {
-          > ul {
-            > li {
-              > a {
-                line-height: 136px;
-                padding-bottom: 0;
-              }
+      .header__list {
+        > ul {
+          > li {
+            > a {
+              line-height: 136px;
+              padding-bottom: 0;
             }
           }
         }
+      }
     }
   }
   @include my-media-query(min, 1737px) {
     .header {
-        .header__list{
-          display: block;
-          >ul{
-            margin: 0 -23px;
-            >li{
-              >a{
-                padding: 0 10px;
-              }
+      .header__list{
+        display: block;
+        >ul{
+          margin: 0 -23px;
+          >li{
+            >a{
+              padding: 0 10px;
             }
           }
         }
+      }
     }
   }
   @include my-media-query(max, map_get($grid-breakpoints, xl) - 1) {
@@ -707,6 +657,50 @@ body, html{
           > li {
             > a {
               padding-bottom: 29px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include my-media-query(max, 991px) {
+    .header__table{
+      display: block;
+      &-cell{
+        display: block;
+        text-align: center;
+      }
+    }
+    .header__logo{
+      text-align: center;
+      line-height: normal;
+      padding-top: 22px;
+      padding-bottom: 20px;
+    }
+    .header{
+      .container{
+        width: 100%;
+      }
+    }
+    .header__list > ul > li > a {
+      padding-bottom: 10px;
+    }
+    .header__btnList{
+      position: absolute;
+      right: 10px !important;
+      top: 28px;
+    }
+    .header__subMenu-menuList{
+      margin: 0 -15px;
+      &-section {
+        padding: 0 15px;
+      }
+      ul {
+        li {
+          a{
+            font-size: 14px;
+            span{
+              padding: 1px 9px;
             }
           }
         }
@@ -741,6 +735,83 @@ body, html{
       }
     }
   }
+}
+
+@include my-media-query(min, map_get($grid-breakpoints, lg)){
+  .clothing {
+    &__section {
+      width: 33.33%;
+      &:nth-last-of-type(1), &:nth-last-of-type(2){
+        .clothing__item {
+          border-bottom: none;
+        }
+      }
+      &:hover{
+        .clothing__item{
+          border-color: transparent;
+          outline: 5px solid #ecd6af;
+          box-shadow: 0 30px 30px rgba(204, 190, 163, 0.3);
+          transform: scale(1.06);
+          z-index: 2;
+          &-img{
+            transform: scale(1.08);
+          }
+        }
+      }
+    }
+    &__item{
+      &-img{
+        transition: 1s;
+      }
+    }
+  }
+
+  .brand__item{
+    >*{
+      position: relative;
+      width: 50%;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    &:nth-of-type(2n){
+      .brand__item-img{
+        right: -50%;
+      }
+      .brand__item-desc{
+        left: -50%;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+    }
+    &-btnList{
+      margin: -5px -10px;
+      &-section{
+        padding: 5px 10px;
+      }
+    }
+  }
+
+
+  .lk {
+    &__rigth {
+      .cart-itogPrice{
+        font-size: 16px;
+        white-space: nowrap;
+        &__textBig{
+          font-size: 27px;
+        }
+      }
+    }
+  }
+  .h1_small{
+    font-size: 50px;
+  }
+  .h1_magrinTop{
+    &-big{
+      margin-top: 80px;
+    }
+  }
+
 
 }
 
@@ -758,6 +829,107 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, md) - 1) {
+  .index__blockVideo{
+    height: 500px;
+    padding-top: 115px;
+    &-title{
+      text-align: center;
+      font-size: 41px;
+      line-height: 42px;
+    }
+  }
+
+  .header{
+    border-bottom: none;
+    border-bottom: 1px solid #666666;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    &__buffer{
+      height: 69px;
+    }
+    >.container{
+      padding: 0;
+      width: auto;
+    }
+    &__btnList{
+      &-btn{
+        text-align: center;
+        width: 69px;
+        &:not(.header__btnList-btn_label){
+          border-left: 1px solid #666666;
+        }
+        &-icon{
+          display: block;
+          width: 100%;
+          height: 68px;
+          line-height: 68px;
+        }
+        &_label{
+          height: 68px;
+          line-height: 68px;
+        }
+      }
+    }
+    &__logo{
+      line-height: normal;
+      display: block;
+      text-align: center;
+      img{
+        max-width: 75%;
+      }
+    }
+    &__list{
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      border-top: 2px solid #e5493a;
+      padding-top: 25px;
+      padding-bottom: 32px;
+      >ul{
+        text-align: center;
+        >li{
+          display: block;
+          font-size: 22px;
+          font-weight: 400;
+          line-height: 40px;
+          font-family: "AA Bebas Neue", sans-serif;
+          >a{
+            display: block;
+            color: #484848;
+          }
+        }
+      }
+    }
+    &__table{
+      &-cell{
+        vertical-align: middle !important;
+        &_btns{
+          width: 207px;
+        }
+      }
+    }
+    &__subMenu{
+      display: none;
+    }
+  }
+  .stock {
+    .row-2 {
+      height: 435px;
+    }
+    .col-1,
+    .grid-sizer{
+      width: 100%;
+    }
+    .col-2{
+      width: 100%;
+    }
+  }
+
   .index-brands {
     &__item {
       width: 100%;
@@ -950,6 +1122,12 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, sm) - 1) {
+  .index__blockVideo {
+    margin-bottom: -6px;
+    &-seach {
+      margin: 0 20px;
+    }
+  }
   .clothing {
     &__item{
       height: 250px;

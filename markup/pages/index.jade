@@ -5,11 +5,97 @@ include ../components/item/item
 block head
     - var headData = {title: "Главная"}
     - var breadcrumb = true
-    //- var index = 'header_index'
+    - var index = 'header_index'
 
     link(href="%=static=%css/separate-css/slick.css", rel="stylesheet", type="text/css")
 
 block content
+    .index__blockVideo
+        .index__blockVideo-video: video(autoplay, loop, muted): source(src="video.mp4", type="video/mp4")
+        .index__blockVideo-progress: span
+
+        .container
+            .index__blockVideo-content
+                p.index__blockVideo-title Collections #[br] TWIN-SET #[br] #[span 2017]
+        .hidden-md-up
+            br
+            br
+            br
+            br
+            br
+            .index__blockVideo-seach
+                input.index__blockVideo-seach-input(placeholder='Поиск по каталогу')
+                buttom.index__blockVideo-seach-btn: +icon('search', 'svg-search', 15, 15)
+
+
+    br
+    .container
+        p.h1 Акции mia-boutique
+    .stock.not-styleLink
+        .grid-sizer
+        a(href="#").stock__item.col-1.row-2
+            span.db.stock__item-bgBlock(style="background-image: url('%=static=%img/content/stock/1.jpg');")
+            span.db.stock__item-content.stock__item-content_bottom
+                span.stock__item-label-red СКИДКИ ДО -90%
+                span.stock__item-label Ликвидация #[br] коллекций прошлых #[br] сезонов
+                .hidden-md-down
+                    br
+                    br
+                    br
+                .stock__item-imgList
+                    .stock__item-imgList-section
+                        span: +img('content/stock/Twin_Set', 'png')
+                    .stock__item-imgList-section
+                        span: +img('content/stock/logo-liviana-conti', 'png')
+                .hidden-md-down
+                    br
+                    br
+                    br
+                button.stock__item-link: span Подробнее об акции
+
+
+        a(href="#").stock__item.col-2
+            span.db.stock__item-bgBlock(style="background-image: url('%=static=%img/content/stock/2.jpg');").hidden-md-down
+            span.db.stock__item-bgBlock(style="background-image: url('%=static=%img/content/stock/2-lg.jpg');").hidden-lg-up
+            span.db.stock__item-content
+                span.db.stock__item-content-title НА ВСЁ -50%
+                span.db.stock__item-content-text Скидка #[br.hidden-lg-up] на осенне-зимние коллекции Twin-set и MYF прошлого сезона теперь ещё больше
+            span.db.stock__item-content.stock__item-content_bottom
+                button.stock__item-link(style="color: #a06d37;"): span Подробнее об акции
+
+        a(href="#").stock__item.col-1
+            span.db.stock__item-bgBlock(style="background-image: url('%=static=%img/content/stock/3.jpg');")
+            span.db.stock__item-content.stock__item-content_bottom
+                span.db.stock__item-title New #[br] Collection #[br] 2017
+                br.hidden-lg-down
+                br.hidden-lg-up
+                br
+                br
+                button.stock__item-link(style="color: #575757;"): span Перейти в каталог
+
+        a(href="#").stock__item.col-1
+            span.db.stock__item-bgBlock(style="background-image: url('%=static=%img/content/stock/4.jpg');").hidden-md-down
+            span.db.stock__item-bgBlock(style="background-image: url('%=static=%img/content/stock/4-lg.jpg');").hidden-lg-up
+            span.db.stock__item-content.stock__item-content_bottom
+                span.db.stock__item-title.stock__item-title_two: b OUTLET
+                .hidden-lg-up
+                    br
+                    br
+
+                .hidden-lg-down
+                    br
+                    br
+                    br
+                br
+                br
+                br
+                br
+                br
+                br
+                button.stock__item-link(style="color: #a89478;"): span Перейти в каталог
+
+    br.hidden-md-down
+    br.hidden-md-down
     .container
         br
         br
@@ -122,6 +208,8 @@ block content
 block script
     script(src="%=static=%js/separate-js/slick.min.js" type="text/javascript")
     script(src="%=static=%js/separate-js/jquery.magnific-popup.min.js" type="text/javascript")
+    script(src="%=static=%js/separate-js/imagesloaded.pkgd.min.js" type="text/javascript")
+    script(src="%=static=%js/separate-js/Masonry.js" type="text/javascript")
 
 
 

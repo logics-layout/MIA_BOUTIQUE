@@ -290,6 +290,17 @@ if ($.fn.masonry) {
             masonryReloadItems(indexTiles);
         });
     }
+    var indexTilesStock = $('.stock').masonry({
+        itemSelector: '.stock__item',
+        columnWidth: ".grid-sizer",
+        // gutter: '.gutter-sizer',
+        percentPosition: true
+    });
+    if (indexTilesStock[0]) {
+        indexTilesStock.imagesLoaded().progress(function() {
+            masonryReloadItems(indexTilesStock);
+        });
+    }
 }
 
 $('.tabs__nav').find('a').click(function(e){
@@ -416,6 +427,27 @@ $('.catalog-toggle-btn').click(function(e){
 
 });
 
+var blockVideo = $('.index__blockVideo-video video');
+// only Firefox and Opera support Ogg ... oh yeah Chrome does too.
+
+
+blockVideo.bind('timeupdate', function(e){
+    var timePercent = (this.currentTime / this.duration)*100;
+    $('.index__blockVideo-progress span').css('width', timePercent+'%')
+});
+
+//
+// function progressHandler(e){
+//     console.log(e);
+//     if(e.total && e.loaded){
+//         // percentage of video loaded
+//         var proportion = Math.round( e.loaded / e.total );
+//         return proportion * 100;
+//     } else {
+//         // do nothing because we're autobuffering.
+//     }
+// }
+// blockVideo[0].addEventListener('progress',progressHandler,false);
 
 
 

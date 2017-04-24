@@ -161,6 +161,126 @@ body {
   }
 }
 
+.stock{
+  &__item{
+    background-color: #eee;
+    height: 435px;
+    position: relative;
+    overflow: hidden;
+    &-bgBlock{
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-size: cover;
+      background-position: center;
+      transition: 1s;
+    }
+    &:hover{
+      .stock__item-bgBlock{
+        transform: scale(1.08);
+      }
+    }
+    &-content{
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      padding: 0 64px;
+      padding-bottom: 58px;
+      padding-top: 40px;
+      line-height: normal;
+      &_bottom{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+      &-title{
+        color: #a06d37;
+        font-size: 50px;
+        font-weight: 700;
+        margin: 0;
+        margin-bottom: 10px;
+      }
+      &-text{
+        color: #524436;
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 35px;
+        max-width: 473px;
+      }
+    }
+    &-title{
+      color: #575757;
+      font-size: 40px;
+      &_two{
+        color: #a89478;
+        font-size: 50px;
+      }
+    }
+    &-label-red{
+      color: white;
+      font-size: 40px;
+      font-weight: 400;
+      background-color: #e5493a;
+      box-shadow: 0 19px 16px rgba(0, 0, 0, 0.2);
+      padding: 10px 17px;
+      line-height: normal;
+      margin-bottom: 33px;
+      display: table;
+    }
+    &-label{
+      box-shadow: 0 19px 16px rgba(0, 0, 0, 0.2);
+      background-color: white;
+      color: #3b3b3b;
+      font-size: 35px;
+      font-weight: 400;
+      line-height: 45px;
+      display: inline-block;
+      padding: 21px 38px;
+    }
+    &-link{
+      color: white;
+      @include btn-clear;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      width: 220px;
+      height: 54px;
+      border: 3px solid;
+      border-radius: 5px;
+      &:hover{
+        background-color: currentColor;
+        >span{
+          color: #000
+        }
+      }
+    }
+    &-imgList{
+      display: table;
+      &-section{
+        display: table-cell;
+        vertical-align: bottom;
+        +*{
+          padding-left: 58px;
+        }
+      }
+    }
+  }
+  .col-1,
+  .grid-sizer{
+    width: 33.33%;
+  }
+  .col-2{
+    width: 66.66%;
+  }
+  .col-3{
+    width: 100%;
+  }
+  .row-2{
+    height: 870px;
+  }
+}
 .object{
   position: relative;
   //&:not(.active){
@@ -1340,6 +1460,91 @@ body {
     }
     &-text{
       max-width: 388px;
+    }
+  }
+}
+
+.index__blockVideo{
+  background-color: #ebebeb;
+  background-size: cover;
+  background-position: center;
+  background-image: url('%=static=%content/blockVideo.jpg');
+  height: 861px;
+  padding-top: 172px;
+  margin-bottom: 16px;
+  position: relative;
+  overflow: hidden;
+  &-progress{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.8);
+    span{
+      display: block;
+      width: 0%;
+      height: 3px;
+      background-color: $mainColor;
+      z-index: 2;
+      transition: 1s;
+    }
+  }
+  &-video{
+    video{
+      position:absolute;
+      min-width:100%;
+      min-height:100%;
+      overflow:hidden;
+      top: 0;
+    }
+  }
+  &-content{
+    position: relative;
+    z-index: 2;
+  }
+  &-title{
+    font-size: 98px;
+    font-weight: 700;
+    line-height: 100px;
+    text-transform: uppercase;
+    color: white;
+    span{
+      color: #e4e635;
+    }
+  }
+  &-seach{
+    position: relative;
+    //width: 270px;
+    margin: 0 50px;
+    &-input{
+      outline: none;
+      background-color: white;
+      box-shadow: 0 11px 7px rgba(0, 0, 0, 0.35);
+      color: #000;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      @include placeholder(#959595);
+      height: 41px;
+      width: 100%;
+      border: none;
+      border-radius: 29px;
+      padding: 0 21px;
+    }
+    &-btn{
+      @include btn-clear;
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      fill: #e1e1e1;
+      padding-right: 19px;
+      svg{
+        display: inline-block;
+        vertical-align: middle;
+        margin-bottom: -12px;
+      }
     }
   }
 }
