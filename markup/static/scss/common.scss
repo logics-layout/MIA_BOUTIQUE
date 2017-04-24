@@ -1189,3 +1189,157 @@ body {
 
 
 }
+
+.clothing{
+  font-size: 0;
+  margin-left: -1px;
+  &__section{
+    display: inline-block;
+    vertical-align: top;
+  }
+  &__item{
+    width: 100%;
+    display: table;
+    text-align: center;
+    color: #484848;
+    font-size: 25px;
+    font-weight: 400;
+    border-left: 1px solid #dadada;
+    border-bottom: 1px solid #dadada;
+    background-color: #fff;
+    height: 530px;
+    position: relative;
+    @include tr;
+    &-cell{
+      display: table-cell;
+      vertical-align: middle;
+    }
+    &-img{
+      img{
+        max-width: 80%;
+      }
+    }
+    &-title{
+      position: absolute;
+      bottom: 56px;
+      width: 100%;
+      left: 0;
+    }
+  }
+}
+
+.index-brands{
+  font-size: 0;
+  &__item{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 33.33%;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    color: #161616;
+    &:hover{
+      .index-brands__content-bgBlock{
+        transform: scale(1.08);
+      }
+    }
+    height: 870px;
+    &_text{
+      .index-brands__content{
+        height: 435px;
+      }
+    }
+  }
+  &__content{
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    color: #fff;
+    &-bgBlock{
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-size: cover;
+      background-position: center;
+      transition: 1s;
+    }
+    &-content{
+      position: relative;
+      z-index: 1;
+      padding-left: 83px;
+      padding-right: 15px;
+      padding-top: 55px;
+      padding-bottom: 15px;
+      &-desc{
+        max-width: 400px;
+      }
+    }
+    &-title{
+      color: white;
+      font-size: 50px;
+      font-weight: 400;
+      line-height: normal;
+      border-bottom: 1px solid #fff;
+      padding-bottom: 11px;
+      margin-bottom: 65px;
+    }
+    &-bottom{
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      padding-left: 83px;
+      padding-right: 15px;
+      padding-bottom: 74px;
+      &-title{
+        font-size: 20px;
+        margin-bottom: 38px;
+      }
+    }
+    &-btnList{
+      font-size: 0;
+      margin: -3px -9px;
+      &-section{
+        display: inline-block;
+        padding: 3px 9px;
+      }
+      &-btn{
+        display: block;
+        font-size: 14px;
+        >span{
+          display: block;
+          color: white;
+          border: 3px solid white;
+          border-radius: 5px;
+          padding: 9px 33px;
+          text-transform: uppercase;
+          font-weight: bold;
+        }
+        &:hover{
+          >span{
+            background-color: white;
+            color: #000;
+          }
+        }
+      }
+    }
+  }
+  &__desc{
+    padding-left: 65px;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    .btn{
+      padding-left: 20px;
+      padding-right: 20px;
+      font-size: 14px;
+    }
+    &-text{
+      max-width: 388px;
+    }
+  }
+}

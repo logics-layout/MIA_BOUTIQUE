@@ -1,5 +1,7 @@
 extends main
 
+include ../components/item/item
+
 block head
     - var headData = {title: "Главная"}
     - var breadcrumb = true
@@ -8,10 +10,113 @@ block head
     link(href="%=static=%css/separate-css/slick.css", rel="stylesheet", type="text/css")
 
 block content
+    .container
+        br
+        br
+        .title-table
+            .title-table__cell
+                h1.ttu.h1 Каталог одежды
+            .title-table__cell.text-right.hidden-sm-down
+                .form-search(style="width: 270px;")
+                    input.form-search__input(placeholder="Поиск по каталогу")
+                    button.form-search__btn: +icon('search', 'svg-search', 15, 15)
+        br
+        br
+        br
+    .clothing.not-styleLink
+        a(href="#").clothing__section
+            .clothing__item
+                .clothing__item-cell
+                    .clothing__item-img: +img('content/clothing/1', 'png')
+                    .clothing__item-title Платья
+        a(href="#").clothing__section
+            .clothing__item
+                .clothing__item-cell
+                    .clothing__item-img: +img('content/clothing/2', 'png')
+                    .clothing__item-title Блузки
+        a(href="#").clothing__section
+            .clothing__item
+                .clothing__item-cell
+                    .clothing__item-img: +img('content/clothing/3', 'png')
+                    .clothing__item-title Юбки
+        a(href="#").clothing__section
+            .clothing__item
+                .clothing__item-cell
+                    .clothing__item-img: +img('content/clothing/4', 'png')
+                    .clothing__item-title Кардиганы
+        a(href="#").clothing__section
+            .clothing__item
+                .clothing__item-cell
+                    .clothing__item-img: +img('content/clothing/5', 'png')
+                    .clothing__item-title Топы
+        a(href="#").clothing__section
+            .clothing__item
+                .clothing__item-cell
+                    .clothing__item-img: +img('content/clothing/6', 'png')
+                    .clothing__item-title Верхняя одежда
+        a(href="#").clothing__section
+            .clothing__item
+                .clothing__item-cell
+                    .clothing__item-img: +img('content/clothing/7', 'png')
+                    .clothing__item-title Сумки
+        a(href="#").clothing__section
+            .clothing__item
+                .clothing__item-cell
+                    .clothing__item-img: +img('content/clothing/8', 'png')
+                    .clothing__item-title Джемпера
+    .hidden-md-down
+        br
+        br
+        br
+    br
+    br
+    br
+    .index-brands
+        .index-brands__item
+            .index-brands__content
+                .index-brands__content-bgBlock(style="background-image: url('%=static=%img/content/index-brands/1.jpg');")
+                .index-brands__content-content
+                    .index-brands__content-content-desc
+                        p.index-brands__content-title TWIN SET
+                        p.index-brands__content-text Попробуйте научиться всегда быть стильными! Если Вас привлекает итальянская мода, присмотритесь к марке «Twin Set».
+                        p.index-brands__content-text Дизайнер Simona Barbieri истинный философ итальянских улиц, впитавших запах герани и кофе. Не нужно удивляться ее бесконечной изобретательности.
 
+                .index-brands__content-bottom
+                        p.index-brands__content-bottom-title: b Смотрите сами:
+                        .index-brands__content-btnList.not-styleLink
+                            .index-brands__content-btnList-section: a(href="#").index-brands__content-btnList-btn: span Имиджи
+                            .index-brands__content-btnList-section: a(href="#").index-brands__content-btnList-btn: span ПОДИУМ
+                            .index-brands__content-btnList-section: a(href="#").index-brands__content-btnList-btn: span Каталог товаров
+        .index-brands__item
+            .index-brands__content
+                .index-brands__content-bgBlock(style="background-image: url('%=static=%img/content/index-brands/2.jpg');")
+                .index-brands__content-content
+                    .index-brands__content-content-desc
+                        p.index-brands__content-title DVROMA
+        .index-brands__item.index-brands__item_text
+            .index-brands__content
+                .index-brands__content-bgBlock(style="background-image: url('%=static=%img/content/index-brands/3.jpg');")
+                .index-brands__content-content
+                    .index-brands__content-content-desc
+                        p.index-brands__content-title MYF
 
-
-
+            .index-brands__desc
+                .index-brands__desc-text
+                    p Попробуйте научиться всегда быть стильными! Если Вас привлекает итальянская мода, присмотритесь к марке «Twin Set». 
+                    p Дизайнер Simona Barbieri истинный философ итальянских улиц, впитавших запах герани и кофе. Не нужно удивляться ее бесконечной изобретательности.
+                br
+                button.btn.btn-grey-three.ttu(style="width: 300px;max-width: 100%;") узнать подробнее о брендах
+    .hidden-md-down
+        br
+        br
+    br
+    br
+    .container
+        p.h1.h1_small Новые поступления
+        .listItemSlider
+            -for(var i=0;i<4;i++)
+                .listItemSlider__section
+                    +item(i)
 
 
 block script

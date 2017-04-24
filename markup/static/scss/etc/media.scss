@@ -36,6 +36,42 @@ body, html{
   }
 }
 
+@include my-media-query(max, 1460px) {
+  .index-brands{
+    &__item{
+      height: 750px;
+      &_text{
+        .index-brands__content{
+          height: 345px;
+        }
+      }
+    }
+    &__content{
+      &-bottom{
+        padding-left: 40px;
+        padding-bottom: 45px;
+        &-title {
+          font-size: 17px;
+          margin-bottom: 25px;
+        }
+      }
+      &-content{
+        padding-left: 40px;
+      }
+      &-title {
+        font-size: 40px;
+        padding-bottom: 4px;
+      }
+      &-btnList {
+        &-btn {
+          > span {
+            padding: 4px 17px;
+          }
+        }
+      }
+    }
+  }
+}
 @include my-media-query(min, 1737px) {
   .header {
       .header__logo{
@@ -82,6 +118,23 @@ body, html{
     }
   }
 }
+@include my-media-query(max, 1360px) {
+  .clothing {
+    &__item {
+      height: 300px;
+      font-size: 19px;
+      padding-bottom: 40px;
+      &-img{
+        img{
+          max-height: 230px;
+        }
+      }
+      &-title{
+        bottom: 16px;
+      }
+    }
+  }
+}
 @include my-media-query(max, 1312px) {
   .listItemSlider{
     .slick-arrow{
@@ -100,6 +153,15 @@ body, html{
   }
 }
 @include my-media-query(max, map_get($grid-breakpoints, xl) - 1) {
+  .index-brands{
+    &__desc {
+      padding-left: 40px;
+    }
+    &__item {
+      font-size: 15px;
+      line-height: 28px;
+    }
+  }
   .lk__left {
     width: 200px;
   }
@@ -128,9 +190,33 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, lg) - 1) {
+  .index-brands {
+    &__item {
+      width: 50%;
+    }
+  }
+  .clothing {
+    &__section {
+      width: 50%;
+      &:nth-last-of-type(1), &:nth-last-of-type(2){
+        .clothing__item {
+          border-bottom: none;
+        }
+      }
+    }
+    &__item{
+      height: 530px;
+      &-img{
+        img{
+          max-height: none;
+        }
+      }
+    }
+  }
   .catalog-toggle-content{
     display: none;
   }
+
   .itemList{
     margin: -8px;
     &__section{
@@ -290,6 +376,7 @@ body, html{
     position: fixed;
     left: 0;
     top: 0;
+    width: 100%;
     &__buffer{
       height: 69px;
     }
@@ -299,11 +386,20 @@ body, html{
     }
     &__btnList{
       &-btn{
-        height: 68px;
+        text-align: center;
         width: 69px;
-        line-height: 68px;
         &:not(.header__btnList-btn_label){
           border-left: 1px solid #666666;
+        }
+        &-icon{
+          display: block;
+          width: 100%;
+          height: 68px;
+          line-height: 68px;
+        }
+        &_label{
+          height: 68px;
+          line-height: 68px;
         }
       }
     }
@@ -378,6 +474,33 @@ body, html{
 }
 
 @include my-media-query(min, map_get($grid-breakpoints, lg)){
+  .clothing {
+    &__section {
+      width: 33.33%;
+      &:nth-last-of-type(1), &:nth-last-of-type(2){
+        .clothing__item {
+          border-bottom: none;
+        }
+      }
+      &:hover{
+        .clothing__item{
+          border-color: transparent;
+          outline: 5px solid #ecd6af;
+          box-shadow: 0 30px 30px rgba(204, 190, 163, 0.3);
+          transform: scale(1.06);
+          z-index: 2;
+          &-img{
+            transform: scale(1.08);
+          }
+        }
+      }
+    }
+    &__item{
+      &-img{
+        transition: 1s;
+      }
+    }
+  }
 
   .brand__item{
     >*{
@@ -622,10 +745,53 @@ body, html{
 }
 
 @include my-media-query(min, map_get($grid-breakpoints, xl)) {
-
+  .clothing {
+    &__section {
+      width: 25%;
+      &:nth-last-of-type(1), &:nth-last-of-type(2), &:nth-last-of-type(3), &:nth-last-of-type(4){
+        .clothing__item {
+          border-bottom: none;
+        }
+      }
+    }
+  }
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, md) - 1) {
+  .index-brands {
+    &__item {
+      width: 100%;
+      height: auto;
+    }
+    &__content{
+      &-content{
+        padding-left: 20px;
+        padding-right: 20px;
+        min-height: 400px;
+      }
+      &-bottom{
+        z-index: 3;
+        position: relative;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+    &__desc {
+      padding: 20px 15px;
+      position: static;
+    }
+  }
+
+  .clothing {
+    &__item{
+      height: 400px;
+      &-img{
+        img{
+          max-height: 250px;
+        }
+      }
+    }
+  }
   .pagination {
     &__btnBlock {
       width: auto;
@@ -784,6 +950,17 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, sm) - 1) {
+  .clothing {
+    &__item{
+      height: 250px;
+      font-size: 16px;
+      &-img{
+        img{
+          max-height: 180px;
+        }
+      }
+    }
+  }
   .itemList{
     &__section{
       width: 100%;

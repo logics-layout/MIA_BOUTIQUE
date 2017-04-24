@@ -27,26 +27,117 @@
       }
     }
   }
+  &__cart{
+    position: absolute;
+    top: 100%;
+    border-top: 5px solid $mainColor;
+    width: 393px;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    right: -40px;
+    color: #737373;
+    font-size: 14px;
+    text-align: left;
+    padding: 0 16px;
+    padding-bottom: 24px;
+    line-height: 20px;
+
+    @include tr;
+    margin-top: 20px;
+    opacity: 0;
+    visibility: hidden;
+
+    &:after{
+      content: '';
+      @include triangle('up', $mainColor);
+      position: absolute;
+      bottom: 100%;
+      right: 52px;
+      margin-bottom: 2px;
+    }
+    &-list{
+      display: table;
+      width: 100%;
+      border-bottom: 1px dotted #e6e6e6;
+      &-row{
+        display: table-row;
+      }
+      &-cell{
+        display: table-cell;
+        vertical-align: middle;
+        padding: 19px 0;
+      }
+      &-img{
+        width: 51px;
+      }
+      &-clear{
+        @include btn-clear;
+        fill: #b9b9b9;
+        display: block;
+        width: 100%;
+        &:hover{
+          fill: $mainColor;
+        }
+      }
+    }
+    &-priceItogo{
+      color: #959595;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 26px;
+      &-price{
+        color: #161616;
+        font-size: 16px;
+        font-weight: 700;
+      }
+    }
+    &-table{
+      display: table;
+      width: 100%;
+      margin-top: 19px;
+      &-cell{
+        display: table-cell;
+        vertical-align: middle;
+      }
+    }
+    &-btn{
+      font-size: 12px;
+      padding: 10px;
+      border-radius: 3px;
+    }
+  }
   &__btnList{
     font-size: 0;
     &-btn{
       @include btn-clear;
       display: inline-block;
-      //background-color: #eee;
-      width: 40px;
-      height: 35px;
-      fill: #363636;
       position: relative;
+      //background-color: #eee;
+      fill: #363636;
       @include tr;
+      &-icon{
+        display: block;
+        width: 40px;
+        height: 35px;
+        text-align: center;
+        line-height: 38px;
+      }
       svg{
         display: inline-block;
         vertical-align: middle;
         margin-top: -4px;
       }
-      &:not(.header__btnList-btn_label){
+      .header__btnList-btn-icon{
         &:hover{
           fill: #e5493a;
           background-color: #f7f7f7;
+        }
+      }
+      &:hover{
+        .header__cart{
+          opacity: 1;
+          margin-top: 0;
+          visibility: visible;
         }
       }
       &-count{

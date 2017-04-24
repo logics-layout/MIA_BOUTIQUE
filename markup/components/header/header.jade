@@ -16,11 +16,39 @@ mixin header(data)
                     a(href="#").header__logo.header__position.header__position_left: +img('/assets/header/logo', 'png')
                 .header__table-cell.header__table-cell_btns.text-right
                     .header__btnList.header__position.header__position_right
-                        button.header__btnList-btn.hidden-xs-down: +icon('profile')
-                        button.header__btnList-btn
-                            +icon('cart')
-                            span.header__btnList-btn-count 2
-                        button.header__btnList-btn.hidden-xs-down: +icon('search')
+                        .header__btnList-btn.hidden-xs-down
+                            a(herf="#").header__btnList-btn-icon: +icon('profile')
+                        .header__btnList-btn
+                            a(href="#").header__btnList-btn-icon
+                                +icon('cart')
+                                span.header__btnList-btn-count 2
+                            .header__cart.hidden-md-down
+                                -for(var i = 0; i<2;i++)
+                                    .header__cart-list
+                                        .header__cart-list-row
+                                            .header__cart-list-cell
+                                                .header__cart-list-img: +img('content/order/1')
+                                            .header__cart-list-cell
+                                                .header__cart-list-text #[b Платье с клёпками] #[br] DVR2100
+                                            .header__cart-list-cell
+                                                .header__cart-list-text: b 2 шт #[br] &nbsp;
+                                            .header__cart-list-cell
+                                                .header__cart-list-text: b 6 800р. #[br] &nbsp;
+                                            .header__cart-list-cell
+                                                button.header__cart-list-clear
+                                                    +icon('clear')
+                                                    br
+                                                    | &nbsp;
+
+                                .header__cart-table
+                                    .header__cart-table-cell
+                                        span.header__cart-priceItogo Итого на сумму: &nbsp;#[b.header__cart-priceItogo-price 12 420р.]
+
+                                    .header__cart-table-cell.text-right
+                                        a(herf="#").header__cart-btn.btn.btn-red.ttu.not-styleLink ПЕРЕЙТИ в корзину
+
+                        .header__btnList-btn.hidden-xs-down
+                            a(herf="#").header__btnList-btn-icon: +icon('search')
 
                     .header__list.text-left
                         ul

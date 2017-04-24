@@ -115,6 +115,9 @@ a.btn {
 .btn-grey-two{
   @include button-variant(#fff, #666);
 }
+.btn-grey-three{
+  @include button-variant(#fff, #7d7474);
+}
 .btn-red{
   @include button-variant(#fff, $mainColor);
 }
