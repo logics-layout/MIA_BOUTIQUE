@@ -287,6 +287,12 @@ body, html{
   .header{
     border-bottom: none;
     border-bottom: 1px solid #666666;
+    position: fixed;
+    left: 0;
+    top: 0;
+    &__buffer{
+      height: 69px;
+    }
     >.container{
       padding: 0;
       width: auto;
@@ -572,6 +578,19 @@ body, html{
     }
   }
   @include my-media-query(max, map_get($grid-breakpoints, xl) - 1) {
+    .header {
+      &__list {
+        > ul {
+          > li {
+            > a {
+              padding-bottom: 29px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include my-media-query(max, 1170px) {
     .header{
       &__list{
         >ul {
@@ -582,7 +601,6 @@ body, html{
             }
             > a {
               font-size: 18px;
-              padding-bottom: 29px;
               >span{
                 padding-left: 11px;
                 padding-right: 11px;

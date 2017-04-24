@@ -112,6 +112,9 @@ a.btn {
 .btn-grey{
   @include button-variant(#fff, #c1c1c1);
 }
+.btn-grey-two{
+  @include button-variant(#fff, #666);
+}
 .btn-red{
   @include button-variant(#fff, $mainColor);
 }
@@ -176,6 +179,12 @@ a.btn {
   &_borderBig{
     border-radius: 5px;
   }
+}
+.btn-md-two{
+  font-size: 14px;
+  padding: 15.5px 20px;
+  border-width: 3px;
+  border-radius: 5px;
 }
 
 .btn-modal{
