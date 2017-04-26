@@ -55,17 +55,25 @@ block content
                 .tabs__content-item#two
                     .contact
                         .contact-left
-                            p.contact__section #[span.contact__title Адрес:] ул. Красная, 69
-                            p.contact__section #[span.contact__title Телефон:] #[a(href='#').not-styleLink.color-grey: span.color-grey__title +7 (351) 223-55-68]
-                            p.contact__section #[span.contact__title Эл. почта:] #[a(href='#').not-styleLink.color-grey: span.color-grey__title miaboutique74@gmail.com]
-                            div.contact__section.contact__section_marginBottomBig
-                                span.contact__title.contact__title_marginBottom Соц. сети:
-                                ul.network.not-styleLink
-                                    li: a(href="#"): +icon('ins')
-                                    li: a(href="#"): +icon('vk')
-                                    li: a(href="#"): +icon('facebook', 'svg-facebook', 17, 17)
-
-                            button.btn.btn-red.ttu.btn-md СВЯЗАТЬСЯ С НАМИ
+                            .row
+                                .col-lg-12.col-md-4
+                                    p.contact__section #[span.contact__title Адрес:] ул. Красная, 69
+                                .col-lg-12.col-md-4
+                                    p.contact__section #[span.contact__title Телефон:] #[a(href='#').not-styleLink.color-grey: span.color-grey__title +7 (351) 223-55-68]
+                                .col-lg-12.col-md-4
+                                    p.contact__section #[span.contact__title Эл. почта:] #[a(href='#').not-styleLink.color-grey: span.color-grey__title miaboutique74@gmail.com]
+                                .col-lg-12.col-md-6
+                                    div.contact__section.contact__section_marginBottomBig
+                                        span.contact__title.contact__title_marginBottom Соц. сети:
+                                        ul.network.not-styleLink
+                                            li: a(href="#"): +icon('ins')
+                                            li: a(href="#"): +icon('vk')
+                                            li: a(href="#"): +icon('facebook', 'svg-facebook', 17, 17)
+                                .col-lg-12.col-md-6
+                                    .contact__section_marginBottomBig
+                                        .hidden-sm-down
+                                            br.hidden-lg-up
+                                        button.btn.btn-red.ttu.btn-md СВЯЗАТЬСЯ С НАМИ
 
 
                         .contact-right(style="background-image: url('%=static=%img/content/contact.jpg');")

@@ -12,7 +12,7 @@ mixin item(num)
                 span.item__stickers-sections
                     each sticker in rowItem.stickers
                         span.item__stickers-sections-section
-                            span.item__stickers-item(style=sticker.style)= sticker.title
+                            span.item__stickers-item(style=sticker.style): span= sticker.title
 
             span.item__img-slider
                 span.item__img-slider-section: +img('assets/item/1')

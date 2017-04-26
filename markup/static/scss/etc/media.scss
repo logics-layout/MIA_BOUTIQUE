@@ -206,10 +206,10 @@ body, html{
     }
   }
   .lk__left {
-    width: 200px;
+    width: 17.6%;
   }
   .lk__rigth{
-    padding-left: 230px;
+    width: 82.4%;
   }
   .catalog__filter-block-section_range{
     width: 270px;
@@ -417,6 +417,10 @@ body, html{
   }
 
   .subscription {
+    text-align: center;
+    &__form-input{
+      text-align: center;
+    }
     &__table {
       display: block;
       &-cell {
@@ -480,10 +484,15 @@ body, html{
 }
 
 @include my-media-query(min, map_get($grid-breakpoints, sm)) {
-
+  @include my-media-query(max, map_get($grid-breakpoints, lg) - 1) {
+    .header__logo img{
+      margin-right: -67px;
+    }
+  }
 }
 
 @include my-media-query(min, map_get($grid-breakpoints, md)) {
+
   .item {
     &__stickers {
       &-item {
@@ -556,6 +565,11 @@ body, html{
           vertical-align: middle;
           &_img{
             width: 48.7%;
+            text-align: right;
+            img{
+              max-height: 380px;
+              display: inline-block;
+            }
           }
         }
       }
@@ -738,6 +752,20 @@ body, html{
 }
 
 @include my-media-query(min, map_get($grid-breakpoints, lg)){
+  .brand {
+    &__item {
+      &:hover {
+        .brand__item-img {
+          img {
+            transform: scale(1.08);
+          }
+        }
+      }
+    }
+  }
+  .footer__content-cell_copyright{
+    width: 343px;
+  }
   .clothing {
     &__section {
       width: 33.33%;
@@ -816,6 +844,9 @@ body, html{
 }
 
 @include my-media-query(min, map_get($grid-breakpoints, xl)) {
+  .footer__content-cell_copyright{
+    width: 360px;
+  }
   .clothing {
     &__section {
       width: 25%;
@@ -828,7 +859,25 @@ body, html{
   }
 }
 
+
 @include my-media-query(max, map_get($grid-breakpoints, md) - 1) {
+  .tabs {
+    &__nav {
+      &_two {
+        li {
+          &.active {
+            > a {
+              font-size: 40px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .contact-left{
+    text-align: center;
+  }
   .index__blockVideo{
     height: 500px;
     padding-top: 115px;
@@ -909,7 +958,7 @@ body, html{
       &-cell{
         vertical-align: middle !important;
         &_btns{
-          width: 207px;
+          width: 138px;
         }
       }
     }

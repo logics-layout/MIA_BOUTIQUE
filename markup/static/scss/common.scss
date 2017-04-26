@@ -41,7 +41,7 @@ body {
 
 .network{
   @include nl;
-  display: inline-block;
+  display: block;
   margin: -2px -7px;
   font-size: 0;
   li{
@@ -405,10 +405,26 @@ body {
         color: #959595;
         font-family: "AA Bebas Neue", sans-serif;
         font-size: 39px;
+        line-height: normal;
         padding: 5px 29px;
         span{
           border-bottom: 1px dashed;
           display: inline-block;
+        }
+      }
+    }
+    &_two{
+      li {
+        &.active{
+          >a{
+            font-size: 50px;
+            color: #161616;
+            >span{
+              border-bottom-color: transparent;
+            }
+          }
+        }
+        a {
         }
       }
     }
@@ -563,8 +579,11 @@ body {
 .lk{
   //display: table;
   width: 100%;
+  font-size: 0;
   >*{
-
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
     //display: table-cell;
     //vertical-align: top;
   }
@@ -618,8 +637,9 @@ body {
     padding-top: 35px;
   }
   &__left{
-    float: left;
-    width: 262px;
+    width: 23%;
+    //float: left;
+    //width: 262px;
     &-content{
       border-right: 2px solid #f2f2f2;
     }
@@ -630,7 +650,9 @@ body {
     }
   }
   &__rigth{
-    padding-left: 292px;
+    width: 77%;
+    padding-left: 30px;
+    //padding-left: 292px;
     label{
       font-size: 13px;
     }
@@ -1185,10 +1207,12 @@ body {
       font-size: 14px;
     }
     &-img{
+      overflow: hidden;
       //background-size: cover;
       //background-image: url('%=static=%');
       //background-position: center;
       img{
+        transition: 1s;
         width: 100%;
       }
     }

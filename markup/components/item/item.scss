@@ -18,7 +18,11 @@
       font-weight: 400;
       display: block;
       text-align: center;
-      line-height: 45px;
+      line-height: 40px;
+      padding-top: 2px;
+      >span{
+        display: block;
+      }
     }
     &-sections{
       display: block;
@@ -34,7 +38,7 @@
     @include tr;
     position: absolute;
     bottom: 20px;
-    left: 23px;
+    left: 16px;
     color: white;
     font-size: 14px;
     font-weight: 700;

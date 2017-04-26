@@ -7,9 +7,11 @@ block head
 
 block content
     .container
-        ul.breadcrumb.not-styleLink.hidden-lg-up
-            li: a(href="#"): span Главная
-            li: span= title
+        .hidden-lg-up
+            br.hidden-sm-down
+            ul.breadcrumb.not-styleLink
+                li: a(href="#"): span Главная
+                li: span= title
         .lk
             .lk__left
                 .lk__left-content.lk__padding
