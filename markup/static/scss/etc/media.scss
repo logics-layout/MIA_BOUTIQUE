@@ -355,19 +355,48 @@ body, html{
       margin: -5px 0;
       border-bottom: 1px dashed #e6e6e6;
       padding: 19px 0;
+      font-size: 0;
       &_head {
         display: none;
       }
       >*{
+        font-size: 14px;
         display: inline-block;
         padding: 5px 10px !important;
         border-bottom: none !important;
       }
       &-img{
+        width: 25%;
         //width: auto !important;
       }
+      &-titleMin{
+        display: block;
+        font-size: 13px;
+        font-weight: normal;
+      }
       &-title{
-        width: auto;
+        width: 75%;
+      }
+      &-mobileDesc{
+        width: 25%;
+        vertical-align: top;
+      }
+      .count__input {
+        width: 58px;
+        height: 35px;
+        font-size: 13px;
+      }
+      &-price{
+
+      }
+      &-count{
+
+      }
+      &-descount{
+
+      }
+      &-price{
+
       }
     }
   }
@@ -752,6 +781,28 @@ body, html{
 }
 
 @include my-media-query(min, map_get($grid-breakpoints, lg)){
+  .cart{
+    &_page{
+      &_lk{
+        .cart__item{
+          &:not(.cart__item_head){
+            >*{
+              &:first-child{
+                padding-left: 0 !important;
+              }
+            }
+          }
+          &-img{
+            width: 140px;
+          }
+          &-title {
+            width: 208px;
+          }
+        }
+      }
+    }
+  }
+
   .brand {
     &__item {
       &:hover {
@@ -1171,6 +1222,23 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, sm) - 1) {
+  .cart__item > * {
+    font-size: 13px;
+    .count{
+      margin-left: -12px;
+      &__input{
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+  .cart__item-title-m{
+    margin-top: 0;
+
+  }
+  .cart__item > * > span + span{
+    margin-top: 0;
+  }
   .index__blockVideo {
     margin-bottom: -6px;
     &-seach {

@@ -41,7 +41,9 @@ body {
 
 .network{
   @include nl;
-  display: block;
+  display: inline-block;
+  width: 140px;
+  max-width: 100%;
   margin: -2px -7px;
   font-size: 0;
   li{
@@ -900,6 +902,18 @@ body {
     &-title{
       //padding-left: 39px;
       width: 230px;
+      &-m{
+        margin-top: 7px;
+        display: block;
+      }
+      &-table{
+        display: table;
+        width: 100%;
+        &-cell{
+          display: table-cell;
+          vertical-align: middle;
+        }
+      }
     }
     &-price{}
     &-count{}
@@ -930,24 +944,7 @@ body {
         }
       }
       &-img{
-        width: 169px;
-      }
-    }
-    &_lk{
-      .cart__item{
-        &:not(.cart__item_head){
-          >*{
-            &:first-child{
-              padding-left: 0 !important;
-            }
-          }
-        }
-        &-img{
-          width: 140px;
-        }
-        &-title {
-          width: 208px;
-        }
+        //width: 169px;
       }
     }
   }

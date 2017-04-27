@@ -17,93 +17,39 @@ block content
                 span.cart__itemCenter Скидка
                 span.cart__itemCenter Стоимость
 
-            .cart__item
-                .cart__item-img: +img('content/order/4')
-                .cart__item-title
-                    span: b Платье с клёпками
-                    span DVR2100
-                .cart__item-price.cart__itemCenter
-                    span: b 6 800р.
-                    span.hidden-md-down &nbsp;
-                .cart__item-count.cart__itemCenter
-                    span
-                        span.count
-                            button.count__btn.count__btn_minus: +icon('arrow-prev')
-                            input.count__input(value="1")
-                            button.count__btn.count__btn_plus.active: +icon('arrow-next')
-                    span.hidden-md-down &nbsp;
-                .cart__item-descount.cart__itemCenter
-                    span: b 10%
-                    span.hidden-md-down &nbsp;
-                .cart__item-price.cart__itemCenter
-                    span: b.color-black 12 420р. #[button.cart__item-clear: +icon('clear')]
-                    span.hidden-md-down &nbsp;
+            - for(var i = 0; i<3; i++)
+                .cart__item
+                    .cart__item-img: +img('content/order/4')
+                    .cart__item-title
+                        .cart__item-title-table
+                            .cart__item-title-table-cell
+                                span.db: b Платье с клёпками
+                                span.cart__item-title-m DVR2100
+                            .cart__item-title-table-cell
+                                button.cart__item-clear.hidden-lg-up: +icon('clear')
+                                span.cart__item-title-m &nbsp;
 
-            .cart__item
-                .cart__item-img: +img('content/order/1')
-                .cart__item-title
-                    span: b Платье с клёпками
-                    span DVR2100
-                .cart__item-price.cart__itemCenter
-                    span: b 6 800р.
-                    span.hidden-md-down &nbsp;
-                .cart__item-count.cart__itemCenter
-                    span
-                        span.count
-                            button.count__btn.count__btn_minus: +icon('arrow-prev')
-                            input.count__input(value="1")
-                            button.count__btn.count__btn_plus.active: +icon('arrow-next')
-                    span.hidden-md-down &nbsp;
-                .cart__item-descount.cart__itemCenter
-                    span: b 10%
-                    span.hidden-md-down &nbsp;
-                .cart__item-price.cart__itemCenter
-                    span: b.color-black 12 420р. #[button.cart__item-clear: +icon('clear')]
-                    span.hidden-md-down &nbsp;
+                    .cart__item-price.cart__itemCenter.cart__item-mobileDesc
+                        span.cart__item-titleMin.hidden-lg-up Сумма
+                        span: b 6 800р.
+                        span.hidden-md-down &nbsp;
+                    .cart__item-count.cart__itemCenter.cart__item-mobileDesc
+                        span.cart__item-titleMin.hidden-lg-up Кол-во
+                        span
+                            span.count
+                                button.count__btn.count__btn_minus: +icon('arrow-prev')
+                                input.count__input(value="1")
+                                button.count__btn.count__btn_plus.active: +icon('arrow-next')
+                        span.hidden-md-down &nbsp;
+                    .cart__item-descount.cart__itemCenter.cart__item-mobileDesc
+                        span.cart__item-titleMin.hidden-lg-up Скидка
+                        span: b 10%
+                        span.hidden-md-down &nbsp;
+                    .cart__item-price.cart__itemCenter.cart__item-mobileDesc
+                        span.cart__item-titleMin.hidden-lg-up Итого
+                        span: b.color-black 12 420р. #[button.cart__item-clear.hidden-md-down: +icon('clear')]
+                        span.hidden-md-down &nbsp;
 
-            .cart__item
-                .cart__item-img: +img('content/order/2')
-                .cart__item-title
-                    span: b Платье с клёпками
-                    span DVR2100
-                .cart__item-price.cart__itemCenter
-                    span: b 6 800р.
-                    span.hidden-md-down &nbsp;
-                .cart__item-count.cart__itemCenter
-                    span
-                        span.count
-                            button.count__btn.count__btn_minus: +icon('arrow-prev')
-                            input.count__input(value="1")
-                            button.count__btn.count__btn_plus.active: +icon('arrow-next')
-                    span.hidden-md-down &nbsp;
-                .cart__item-descount.cart__itemCenter
-                    span: b 10%
-                    span.hidden-md-down &nbsp;
-                .cart__item-price.cart__itemCenter
-                    span: b.color-black 12 420р. #[button.cart__item-clear: +icon('clear')]
-                    span.hidden-md-down &nbsp;
-
-            .cart__item
-                .cart__item-img: +img('content/order/3')
-                .cart__item-title
-                    span: b Платье с клёпками
-                    span DVR2100
-                .cart__item-price.cart__itemCenter
-                    span: b 6 800р.
-                    span.hidden-md-down &nbsp;
-                .cart__item-count.cart__itemCenter
-                    span
-                        span.count
-                            button.count__btn.count__btn_minus: +icon('arrow-prev')
-                            input.count__input(value="1")
-                            button.count__btn.count__btn_plus.active: +icon('arrow-next')
-                    span.hidden-md-down &nbsp;
-                .cart__item-descount.cart__itemCenter
-                    span: b 10%
-                    span.hidden-md-down &nbsp;
-                .cart__item-price.cart__itemCenter
-                    span: b.color-black 12 420р. #[button.cart__item-clear: +icon('clear')]
-                    span.hidden-md-down &nbsp;
         br
         p.cart-itogPrice.text-right Итого: #[b.cart-itogPrice__textBig.cart-itogPrice__textBig_margin 230.00 р.]
         br.hidden-md-up
