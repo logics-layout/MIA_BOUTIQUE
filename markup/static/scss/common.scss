@@ -152,6 +152,7 @@ body {
     @include tr;
     cursor: pointer;
     z-index: 2;
+    pointer-events: none;
     svg{
       display: inline-block;
     }
@@ -1384,6 +1385,9 @@ body {
     &:hover{
       .index-brands__content-bgBlock{
         transform: scale(1.08);
+      }
+      .index-brands__content-hover{
+        opacity: 1;
       }
     }
     height: 870px;

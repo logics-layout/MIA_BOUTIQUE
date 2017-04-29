@@ -436,6 +436,14 @@ blockVideo.bind('timeupdate', function(e){
     $('.index__blockVideo-progress span').css('width', timePercent+'%')
 });
 
+if($.fn.popover){
+    $('[data-toggle="popover"]').popover({
+        trigger: 'click',
+        container: 'body',
+        html: true
+    });
+}
+
 //
 // function progressHandler(e){
 //     console.log(e);

@@ -51,7 +51,8 @@ body, html{
       height: 750px;
       &_text{
         .index-brands__content{
-          height: 345px;
+          height: auto;
+          min-height: 345px;
         }
       }
     }
@@ -781,6 +782,10 @@ body, html{
 }
 
 @include my-media-query(min, map_get($grid-breakpoints, lg)){
+  .index-brands__content-hover{
+      opacity: 0;
+      transition: .6s;
+  }
   .cart{
     &_page{
       &_lk{
@@ -1039,7 +1044,7 @@ body, html{
       &-content{
         padding-left: 20px;
         padding-right: 20px;
-        min-height: 400px;
+        //min-height: 400px;
       }
       &-bottom{
         z-index: 3;

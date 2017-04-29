@@ -15,7 +15,7 @@ block content
                 .detail-card__slider.not-styleLink
                     span.item__stickers-sections
                         span.item__stickers-sections-section
-                            span.item__stickers-item.item__stickers-item_big -30 %
+                            span.item__stickers-item.item__stickers-item_big: span -30 %
 
                     .detail-card__slider-view.resize-el.resize-el_grey.magnificPopup
                         -for(var i=0;i<12;i++)
@@ -25,7 +25,6 @@ block content
                         -for(var i=0;i<12;i++)
                             .detail-card__slider-preview-section(style="background-image: url('%=static=%img/content/detail-card__slider/1.jpg');")
                     br
-
 
             .col-lg-7
                 .detail-card__desc
@@ -63,10 +62,11 @@ block content
                     button.btn.btn-red.ttu Добавить в корзину &nbsp;&nbsp; #[+icon('basket', 'svg-basket', 21, 17)]
                     span.hidden-xs-down &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     .hidden-sm-up
-                    a(href="#", style="white-space: nowrap;").not-styleLink.color-greyTwo
+                    a(data-toggle="popover", data-placement="left", data-content="<div class='text-center not-styleLink'><ul class='network' style='display: block;overflow: hidden;margin-top: 0;margin-bottom: 0;'><li><a href='#'><svg class='icon__ins' width='17px' height='17px'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#ins'></use></svg></a></li><li><a href='#'><svg class='icon__vk' width='20px' height='11px'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#vk'></use></svg></a></li><li><a href='#'><svg class='svg-facebook' width='17' height='17'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#facebook'></use></svg></a></li></ul></div>", href="#", style="white-space: nowrap;").not-styleLink.color-greyTwo
                         span.color-greyTwo__title.color-greyTwo__title_viewBorder.color-greyTwo__title_dashed Поделиться образом
                         | &nbsp;
                         span: +icon('plus')
+
                     br
                     br
                     .collapse.not-styleLink
@@ -90,14 +90,12 @@ block content
         p.h1.h1_small.h1_magrinTop-big Дополните свой образ #[span.hidden-xs-down &nbsp; #[+icon('bow')]]
         .listItemSlider
             -for(var i=0;i<8;i++)
-                .listItemSlider__section
-                    +item(i)
+                .listItemSlider__section: +item(i)
 
 
 block script
     script(src="%=static=%js/separate-js/slick.min.js" type="text/javascript")
     script(src="%=static=%js/separate-js/jquery.magnific-popup.min.js" type="text/javascript")
-
 
 
 

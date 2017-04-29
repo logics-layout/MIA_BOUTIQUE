@@ -18,10 +18,10 @@
       font-weight: 400;
       display: block;
       text-align: center;
-      line-height: 40px;
-      padding-top: 2px;
+      line-height: 42px;
       >span{
-        display: block;
+        display: inline-block;
+        line-height: 0;
       }
     }
     &-sections{

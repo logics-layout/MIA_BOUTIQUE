@@ -48,7 +48,7 @@ mixin header(data)
                                         a(herf="#").header__cart-btn.btn.btn-red.ttu.not-styleLink ПЕРЕЙТИ в корзину
 
                         .header__btnList-btn.hidden-sm-down
-                            a(herf="#").header__btnList-btn-icon: +icon('search')
+                            a(herf="#", data-toggle="popover", data-placement="left", data-content="<div style='width: 270px;' class='form-search'><input placeholder='Поиск по каталогу' class='form-search__input'><button class='form-search__btn'><svg class='svg-search' width='15' height='15'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#search'></use></svg></button></div>").header__btnList-btn-icon: +icon('search')
 
                     .header__list.text-left
                         ul
