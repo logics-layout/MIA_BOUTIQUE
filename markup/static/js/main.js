@@ -1,22 +1,22 @@
 $(document).on('click', '[href="#"]', function(e) {
     return e.preventDefault();
 });
-// var linkTop = $('.footer__scrollTop');
-// linkTop.click(function () {
-//     $('html, body').animate({ scrollTop: 0 }, 500);
-// });
+var linkTop = $('.linkTop');
+linkTop.click(function () {
+    $('html, body').animate({ scrollTop: 0 }, 500);
+});
 $(window).on({
     load: function () {
         checkFooterHeight();
         // checkHeaderFix();
     },
     scroll: function () {
-        // var scrollTop = $(window).scrollTop();
-        // if(scrollTop > 200){
-        //     linkTop.addClass('active');
-        // }else{
-        //     linkTop.removeClass('active');
-        // }
+        var scrollTop = $(window).scrollTop();
+        if(scrollTop > 200){
+            linkTop.addClass('active');
+        }else{
+            linkTop.removeClass('active');
+        }
         // checkHeaderFix();
     },
     resize: function () {
@@ -414,8 +414,14 @@ if (typeof noUiSlider !== "undefined" && noUiSlider !== null) {
         } else {
             el = catalogPriceInputOt;
         }
-        el.text(values[handle]+" p.");
-        return el.css('left', val5[handle] + "%");
+        el.text(values[handle]);
+        // console.log();
+        //
+        // return el.css('left', val5[handle] + "%");
+        return el.css({
+            left: val5[handle] + "%",
+            marginLeft: "-"+(el[0].offsetWidth/2)+"px"
+        });
     };
     range[0].noUiSlider.on('update', _fnNoUiSlider);
 }
@@ -443,6 +449,18 @@ if($.fn.popover){
         html: true
     });
 }
+
+
+$(document).on('click', function (e) {
+   var _this = $(e.target),
+       popover = $('.popover');
+
+    if((!_this.is('[data-toggle="popover"]') && !_this.closest('[data-toggle="popover"]')[0]) && popover[0] && popover.is(':visible')){
+        if(!_this.closest('.popover')[0] && !_this.is('.popover')){
+            $('[aria-describedby="'+popover.filter(':visible').attr('id')+'"]').click();
+        }
+    }
+});
 
 //
 // function progressHandler(e){
